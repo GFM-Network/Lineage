@@ -72,7 +72,7 @@ end;
 end;
 
 //-----------------------------------------------------------------------------
-begin    //repete novamente o script
+begin    //repete o script
 Print('repete novamente');
   repeat
    toVillageIfDeath;
