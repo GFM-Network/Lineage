@@ -21,6 +21,7 @@ begin
    toSpot;
 end;
 
+//Return to Town
 procedure toTownzone;
 begin
     TTeleport.FTownzone;
@@ -28,6 +29,7 @@ begin
     toBuff;
 end;
 
+//Rebuff Noblesse Blessing
 procedure toRebuff;
   begin
   IdBuff:= 1323 ; //Check BUFF
