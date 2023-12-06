@@ -11,7 +11,7 @@ var L2Skill: TL2Skill;
 //Dead Character goes to village
 procedure toVillageIfDeath;
 begin
-  TUtilitarios.FtoVillageIfDeath;
+  TTools.FtoVillageIfDeath;
 end;
 
 //Macro Buff | Fighter
@@ -32,10 +32,10 @@ end;
 
 //Rebuff Noblesse Blessing
 procedure toRebuff;
-  begin
+begin
   IdBuff:= 1323 ; //Check BUFF
   toVillageIfDeath;
-   while not User.Buffs.ById(IdBuff,obj) do begin
+while not User.Buffs.ById(IdBuff,obj) do begin
         Print('Sem Nobles');
         toVillageIfDeath;
         Engine.Facecontrol(0,False);
@@ -46,7 +46,26 @@ end;
 //Teleport to spot based on level
 procedure toSpot;
 begin
-//First spot 5-20
+
+//Kill Gremlins to reach lv 5
+if (User.Level>5) then begin
+begin
+    Engine.SetTarget (Gremlin);
+    Delay (1000)
+    Engine.LoadConfig('');    //CHARACTER NAME
+    Engine.LoadZone('');   //ZMAP NAME
+    Print('DONE!');
+    toVillage;
+    Engine.Facecontrol(0,True);
+end;
+
+begin
+    TTeleport.FFirst;
+    delay(500);
+    TPath.FFirst;
+end;
+
+//First spot lv 5-20
 if ((User.Level>4) and (User.Level<20)) then begin
 begin
     TTeleport.FFirst;
@@ -54,7 +73,7 @@ begin
     TPath.FFirst;
 end;
 
-//Teleport to second spot 20-40
+//Teleport to second spot lv 20-40
 if ((User.Level>19) and (User.Level<40)) then begin
 begin
     TTeleport.FSecond;
@@ -62,7 +81,7 @@ begin
     TPath.FSecond;
 end;
 
-//Teleport to third spot 40-55
+//Teleport to third spot lv 40-55
 if ((User.Level>39) and (User.Level<55)) then begin
 procedure TeleportThirdSpot;
 begin
