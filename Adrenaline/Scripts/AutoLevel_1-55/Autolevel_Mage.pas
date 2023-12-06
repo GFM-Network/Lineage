@@ -8,6 +8,7 @@ var Figth_Flag:boolean;
      Buffs:TL2Buff;
 var L2Skill: TL2Skill;
 
+//Dead Character goes to village
 procedure toVillageIfDeath;
 begin
   TUtilitarios.FtoVillageIfDeath;
@@ -42,6 +43,7 @@ procedure toRebuff;
    end;
 end;
 
+//Teleport to spot based on level
 procedure toSpot;
 begin
 //First spot 5-20
