@@ -17,7 +17,7 @@ end;
 //Macro Buff | Fighter
 procedure toBuff;
 begin
-   TBuff.FFighter;
+   TBuff.FMage;
    delay(500);
    toSpot;
 end;
@@ -36,7 +36,7 @@ begin
   IdBuff:= 1323 ; //Check BUFF
   toVillageIfDeath;
 while not User.Buffs.ById(IdBuff,obj) do begin
-        Print('Sem Nobles');
+        Print('Without Noblesse Blessing');
         toVillageIfDeath;
         Engine.Facecontrol(0,False);
         toTownzone;
@@ -57,12 +57,6 @@ begin
     Print('DONE!');
     toVillage;
     Engine.Facecontrol(0,True);
-end;
-
-begin
-    TTeleport.FFirst;
-    delay(500);
-    TPath.FFirst;
 end;
 
 //First spot lv 5-20
@@ -93,8 +87,8 @@ end;
 end;
 
 //-----------------------------------------------------------------------------
-begin    //repete o script
-Print('repete novamente');
+begin    //Loop Script
+Print('Repeat Script');
   repeat
    toVillageIfDeath;
    toBuff;
