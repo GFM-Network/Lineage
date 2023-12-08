@@ -25,12 +25,12 @@ begin
 end;
 
 // Return to Town
-procedure toTownzone;
-begin
-  TTeleport.FTownzone;
-  Delay(500);
-  toBuff;
-end;
+//procedure toTownzone;
+//begin
+//  TTeleport.FTownzone;
+// Delay(500);
+//  toBuff;
+//end;
 
 // Rebuff Noblesse Blessing
 procedure toRebuff;
