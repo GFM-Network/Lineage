@@ -53,7 +53,7 @@ begin
   // Kill Gremlins to reach level 5
   if (User.Level < 5) then
   begin
-    Engine.SetTarget(Gremlin);
+    Engine.SetTarget(18342);           // TARGET GREMLIN
     Delay(1000);
     Engine.LoadConfig('Autolevel');    // CHARACTER NAME
     Print('DONE!');
