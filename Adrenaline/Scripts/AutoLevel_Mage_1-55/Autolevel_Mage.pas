@@ -1,4 +1,5 @@
-uses SysUtils, TBuff, TTeleport, TPath, TTools;
+uses
+  SysUtils, TBuff, TTeleport, TPath, TTools;
 
 var
   Figth_Flag: boolean;
@@ -16,7 +17,7 @@ begin
   TTools.FtoVillageIfDeath;
 end;
 
-// Macro Buff | Fighter
+// Macro Buff | Mage
 procedure toBuff;
 begin
   TBuff.FMage;
@@ -24,111 +25,60 @@ begin
   toSpot;
 end;
 
-// Return to Town
-//procedure toTownzone;
-//begin
-//  TTeleport.FTownzone;
-// Delay(500);
-//  toBuff;
-//end;
-
-// Rebuff Noblesse Blessing
-//procedure toRebuff;
-//begin
-//  IdBuff := 1323; // Check BUFF
-//  toVillageIfDeath;
-//  while not User.Buffs.ById(IdBuff, obj) do
-//  begin
-//    Print('Without Noblesse Blessing');
-//    toVillageIfDeath;
-//    Engine.Facecontrol(0, False);
-//    TTeleport.toTownzone;
-//  end;
-//end;
-
-
 //Teleport to spot based on level
 procedure toSpot;
 begin
   // Kill Gremlins to reach level 5
-  if (User.Level < 5) then
+  while (User.Level < 5) do
   begin
     Engine.SetTarget(18342);           // TARGET GREMLIN
     Delay(1000);
     Engine.LoadConfig('Autolevel');    // CHARACTER NAME
-    Print('DONE!');
+    Print('Leveling up...');
     Engine.Facecontrol(0, True);
-  end
-  else
-  begin
-    // First spot level 5-20
-    if ((User.Level >= 5) and (User.Level < 20)) then
+
+    // Additional logic or actions if needed while waiting for level 5
+    if (User.InCombat) then
     begin
-      TTeleport.FFirst;
-      Delay(500);
-      TPath.FFirst;
-
-      // Check combat status and take actions if needed
-      if (User.Target.Dead) then
-      begin
-        while User.InCombat do
-          Delay(1000);
-
-        // Additional checks or actions if needed
-        Engine.AutoTarget(2500);
-        Engine.Attack;
-        Engine.Pickup;
-      end;
-    end
-    // Teleport to second spot level 20-40
-    else if ((User.Level >= 20) and (User.Level < 40)) then
-    begin
-      TTeleport.FSecond;
-      Delay(500);
-      TPath.FSecond;
-
-      // Check combat status and take actions if needed
-      if (User.Target.Dead) then
-      begin
-        while User.InCombat do
-          Delay(1000);
-
-        // Additional checks or actions if needed
-        Engine.AutoTarget(2500);
-        Engine.Attack;
-        Engine.Pickup;
-      end;
-    end
-    // Teleport to third spot level 40-55
-    else if ((User.Level >= 40) and (User.Level < 55)) then
-    begin
-      TTeleport.FThird;
-      Delay(500);
-      TPath.FThird;
-
-      // Check combat status and take actions if needed
-      if (User.Target.Dead) then
-      begin
-        while User.InCombat do
-          Delay(1000);
-
-        // Additional checks or actions if needed
-        Engine.AutoTarget(2500);
-        Engine.Attack;
-        Engine.Pickup;
-      end;
+      Print('Character is in combat, waiting...');
+      // You can add more actions or conditions as needed
+      Delay(5000); // Adjust delay as needed
     end;
-    // Add more spots as needed
   end;
+
+  // Once the loop exits, it means User.Level is now 5 or higher
+  Engine.Facecontrol(0, False); // Stop attack
+
+  // First spot level 5-20
+  while (User.Level < 20) do
+  begin
+    TTeleport.FFirst;
+    Delay(5000);
+    TPath.FFirst;
+    Delay(5000);
+
+    // Additional logic or actions if needed while waiting for level 20
+    if (User.InCombat) then
+    begin
+      Print('Character is in combat, waiting...');
+      // You can add more actions or conditions as needed
+      Delay(5000); // Adjust delay as needed
+    end;
+  end;
+
+  // Once the loop exits, it means User.Level is now 20 or higher
+  Engine.Facecontrol(0, False); // Stop attack
+
+  // Continue with similar logic for other level ranges...
+
 end;
 
-
 //-----------------------------------------------------------------------------
-begin    //Loop Script
-Print('Repeat Script');
+begin // Loop Script
+  Print('Repeat Script');
   repeat
-   toVillageIfDeath;
-   toBuff;
+    toVillageIfDeath;
+    toBuff;
   until Engine.Status = lsOffline;
   Delay(5000);
 end.

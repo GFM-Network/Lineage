@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "fpDebug",
+            "request": "launch",
+            "name": "Debug Pascal program",
+            "program": "${workspaceFolder}/executable"
+        },
+        {
+            "type": "fpDebug",
+            "request": "launch",
+            "name": "Debug active file as Pascal-program",
+            "program": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}${command:executableExtension}"
+        },
+        {
+            "type": "fpDebug",
+            "request": "launch",
+            "name": "Debug Pascal program",
+            "program": "${workspaceFolder}/executable"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug",
+            "program": "${workspaceFolder}/<executable file>",
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

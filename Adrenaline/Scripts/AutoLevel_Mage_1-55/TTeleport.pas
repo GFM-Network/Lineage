@@ -4,6 +4,16 @@ interface
 
 implementation
 
+var Figth_Flag:boolean;
+     Item: TL2Item;
+     Npc: TL2Npc;
+     Obj: TL2Buff;
+     IdBuff: integer;
+     Buffs:TL2Buff;
+var L2Skill: TL2Skill;
+
+
+
 // Townzone Dark Elf
 procedure FTownzone;
 begin
@@ -24,14 +34,14 @@ begin
   Engine.BypassToServer('_cbbsteleportlist');
   Delay(500);
   Engine.BypassToServer('_cbbsteleport_40_1');
-    Delay(500);
-  Engine.SetTarget('Roxxy');  //Target Gatekeeper
-    Delay(500);
+  Delay(5000);
+  Engine.SetTarget('Milia');  //Target Gatekeeper
+  Delay(1000);
   Engine.DlgOpen; //Open chat
-    Delay(500);
-  Engine.DlgSel(02);
-      Delay(500);
-  Engine.DlgSel(08);
+  Delay(1000);
+  Engine.DlgSel(03);
+  Delay(1000);
+  Engine.DlgSel(09);
   Print('Teleporting to First Spot');
   Delay(5000);
 end;
