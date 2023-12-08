@@ -69,6 +69,19 @@ begin
       TTeleport.FFirst;
       Delay(500);
       TPath.FFirst;
+
+      // Check combat status and take actions if needed
+      if (User.Target.Dead) then
+      begin
+        while User.InCombat do
+          Delay(1000);
+
+        // Additional checks or actions if needed
+        Engine.AutoSoulShot(5789, True);
+        Engine.AutoTarget(2500);
+        Engine.Attack;
+        Engine.Pickup;
+      end;
     end
     // Teleport to second spot level 20-40
     else if ((User.Level >= 20) and (User.Level < 40)) then
@@ -76,6 +89,19 @@ begin
       TTeleport.FSecond;
       Delay(500);
       TPath.FSecond;
+
+      // Check combat status and take actions if needed
+      if (User.Target.Dead) then
+      begin
+        while User.InCombat do
+          Delay(1000);
+
+        // Additional checks or actions if needed
+        Engine.AutoSoulShot(5789, True);
+        Engine.AutoTarget(2500);
+        Engine.Attack;
+        Engine.Pickup;
+      end;
     end
     // Teleport to third spot level 40-55
     else if ((User.Level >= 40) and (User.Level < 55)) then
@@ -83,10 +109,24 @@ begin
       TTeleport.FThird;
       Delay(500);
       TPath.FThird;
+
+      // Check combat status and take actions if needed
+      if (User.Target.Dead) then
+      begin
+        while User.InCombat do
+          Delay(1000);
+
+        // Additional checks or actions if needed
+        Engine.AutoSoulShot(5789, True);
+        Engine.AutoTarget(2500);
+        Engine.Attack;
+        Engine.Pickup;
+      end;
     end;
     // Add more spots as needed
   end;
 end;
+
 
 //-----------------------------------------------------------------------------
 begin    //Loop Script
