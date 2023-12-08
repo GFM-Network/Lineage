@@ -57,7 +57,6 @@ begin
     Delay(1000);
     Engine.LoadConfig('Autolevel');    // CHARACTER NAME
     Print('DONE!');
-    TTeleport.FTownzone;
     Engine.Facecontrol(0, True);
   end
   else
