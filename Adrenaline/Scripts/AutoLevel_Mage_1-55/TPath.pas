@@ -14,7 +14,7 @@ begin
   Delay(1000);
   Engine.MoveTo(-107960, 215560, -3264);
   Print('Second Zone');
-  TLoadingClass.Autolevel;    // Adrenaline Settings
+  Engine.LoadConfig('Autolevel');    // Adrenaline Settings
   Print('Start Farm!');
   Engine.Facecontrol(0, True);
 end;
@@ -40,7 +40,7 @@ begin
   Delay(1000);
   Engine.MoveTo(9160,122872,-3728);
   Print('Sixth Zone');    
-  TLoadingClass.Autolevel;    // Adrenaline Settings
+  Engine.LoadConfig('Autolevel');    // Adrenaline Settings
   Print('Start Farm!');
   Engine.Facecontrol(0, True);
 end;
@@ -57,7 +57,7 @@ begin
   Print('Second Zone');
   Engine.MoveTo(175432, 19688, -3232);  
   Print('Third Zone');
-  TLoadingClass.Autolevel;    // Adrenaline Settings
+  Engine.LoadConfig('Autolevel');    // Adrenaline Settings
   Print('Start Farm!');
   Engine.Facecontrol(0, True);
 end;
