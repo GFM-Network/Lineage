@@ -77,7 +77,6 @@ begin
           Delay(1000);
 
         // Additional checks or actions if needed
-        Engine.AutoSoulShot(5789, True);
         Engine.AutoTarget(2500);
         Engine.Attack;
         Engine.Pickup;
@@ -97,7 +96,6 @@ begin
           Delay(1000);
 
         // Additional checks or actions if needed
-        Engine.AutoSoulShot(5789, True);
         Engine.AutoTarget(2500);
         Engine.Attack;
         Engine.Pickup;
@@ -117,7 +115,6 @@ begin
           Delay(1000);
 
         // Additional checks or actions if needed
-        Engine.AutoSoulShot(5789, True);
         Engine.AutoTarget(2500);
         Engine.Attack;
         Engine.Pickup;
