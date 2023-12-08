@@ -10,14 +10,14 @@ begin
   Delay(500);
   Engine.BypassToServer('_bbsbuffer');
   Delay(500);
-  Engine.BypassToServer('_bbsbufferbypass_giveBuffSet figher 0 0');
+  Engine.BypassToServer('_bbsbufferbypass_giveBuffSet mage 0 0');
   Delay(500);
   Print('Buff TFighter');
 end;
 
 procedure FMage;
 begin
-  Engine.BypassToServer('_bbshome');
+ Engine.BypassToServer('_bbshome');
   Delay(500);
   Engine.BypassToServer('_bbsbuffer');
   Delay(500);
