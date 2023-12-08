@@ -33,18 +33,18 @@ end;
 //end;
 
 // Rebuff Noblesse Blessing
-procedure toRebuff;
-begin
-  IdBuff := 1323; // Check BUFF
-  toVillageIfDeath;
-  while not User.Buffs.ById(IdBuff, obj) do
-  begin
-    Print('Without Noblesse Blessing');
-    toVillageIfDeath;
-    Engine.Facecontrol(0, False);
-    toTownzone;
-  end;
-end;
+//procedure toRebuff;
+//begin
+//  IdBuff := 1323; // Check BUFF
+//  toVillageIfDeath;
+//  while not User.Buffs.ById(IdBuff, obj) do
+//  begin
+//    Print('Without Noblesse Blessing');
+//    toVillageIfDeath;
+//    Engine.Facecontrol(0, False);
+//    TTeleport.toTownzone;
+//  end;
+//end;
 
 
 //Teleport to spot based on level
