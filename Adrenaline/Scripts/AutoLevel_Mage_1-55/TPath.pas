@@ -1,12 +1,12 @@
 unit TPath;
-fifthfirs
+//fifthfirs
 interface
 
 implementation
 
 
 procedure FFirst;
-// Teleport to first spot level 5-20 | Talking Island Obelisk of Victory
+// Move to first spot level 5-20 | Talking Island Obelisk of Victory
 begin
   Print('Fight zone');
   Engine.MoveTo(-106606, 214645, -3408);
@@ -20,7 +20,7 @@ begin
 end;
 
 procedure FSecond;
-// Teleport to second spot level 20-40 | Outside Cruma Tower
+// Move to second spot level 20-40 | Outside Cruma Tower
 begin
   Print('Fight zone');
   Engine.MoveTo(5106,126916,-3664);
@@ -46,7 +46,7 @@ begin
 end;
 
 procedure FThird;
-// Teleport to third spot level 40-55 | Cemetery
+// Move to third spot level 40-55 | Cemetery
 begin
   Print('Fight zone');
   Engine.MoveTo(172136, 20325, -3312);
