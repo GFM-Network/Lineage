@@ -1,4 +1,4 @@
-uses SysUtils, TBuff, TTeleport, TPath;
+uses SysUtils, TBuff, TTeleport, TPath, TTools;
 
 var
   Figth_Flag: boolean;
