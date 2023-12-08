@@ -55,8 +55,7 @@ begin
   begin
     Engine.SetTarget(Gremlin);
     Delay(1000);
-    Engine.LoadConfig('');    // CHARACTER NAME
-    Engine.LoadZone('');      // ZMAP NAME
+    Engine.LoadConfig('Autolevel');    // CHARACTER NAME
     Print('DONE!');
     toVillage;
     Engine.Facecontrol(0, True);
