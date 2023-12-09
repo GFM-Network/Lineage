@@ -210,6 +210,6 @@ begin    //Loop Script
   repeat
     toVillageIfDeath;
     toBuff;
-  until Engine.Status = lsOffline;
+  until (User.Level >= 55) or (Engine.Status = lsOffline);
   Delay(5000);
 end.
