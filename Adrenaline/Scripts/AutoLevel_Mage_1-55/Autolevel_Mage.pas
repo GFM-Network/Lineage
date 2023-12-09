@@ -37,7 +37,7 @@ begin
       Delay(1000);
       Engine.LoadConfig('Autolevel');      //SETTINGS NAME
       Engine.Facecontrol(0, True);
-      Delay(1000);
+      Delay(5000);
       Print('Leveling up...');
 
       if (User.Level >= 5) then
@@ -81,7 +81,7 @@ begin
       begin
         Engine.LoadConfig('Autolevel');  // SETTINGS NAME
         Engine.Facecontrol(0, True);
-        Delay(1000);
+        Delay(5000);
         Print('Leveling up...');
       end;
 
@@ -126,7 +126,7 @@ begin
       begin
         Engine.LoadConfig('Autolevel');  // SETTINGS NAME
         Engine.Facecontrol(0, True);
-        Delay(1000);
+        Delay(5000);
         Print('Leveling up...');
       end;
 
@@ -171,7 +171,7 @@ begin
       begin
         Engine.LoadConfig('Autolevel');  // SETTINGS NAME
         Engine.Facecontrol(0, True);
-        Delay(1000);
+        Delay(5000);
         Print('Leveling up...');
       end;
 
