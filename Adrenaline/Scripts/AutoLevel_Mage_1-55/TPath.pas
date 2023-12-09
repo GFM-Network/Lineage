@@ -14,6 +14,7 @@ begin
   Delay(1000);
   Engine.MoveTo(-107960, 215560, -3264);
   Print('Second Zone');
+  if InZone(-107960, 215560, -3264) do    
   Engine.LoadConfig('Autolevel');    // Adrenaline Settings
   Print('Start Farm!');
   Engine.Facecontrol(0, True);
@@ -58,6 +59,7 @@ begin
   Print('Second Zone');
   Engine.MoveTo(175432, 19688, -3232);  
   Print('Third Zone');
+  if InZone(175432, 19688, -3232) do    
   Engine.LoadConfig('Autolevel');    // Adrenaline Settings
   Print('Start Farm!');
   Engine.Facecontrol(0, True);
