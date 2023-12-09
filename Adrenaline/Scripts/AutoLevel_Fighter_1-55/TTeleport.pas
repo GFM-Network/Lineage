@@ -40,11 +40,13 @@ begin
   Engine.BypassToServer('10');
   Delay(5000);
   Engine.SetTarget('Milia');  //Target Gatekeeper
+  Print('Heading to the Gatekeeper');
   Delay(5000);
   Engine.DlgOpen; //Open chat
-  Delay(1000);
+  Delay(15000);
+  Print('Selecting the spot')
   Engine.DlgSel(03);
-  Delay(1000);
+  Delay(10000);
   Engine.DlgSel(09);
   Print('Teleporting to First Spot');
   Delay(5000);
