@@ -25,21 +25,22 @@ begin
   Print('Fight zone');
   Engine.MoveTo(5106,126916,-3664);
   Print('First Zone');
-  Delay(1000);
+  Delay(5000);
   Engine.MoveTo(5976,125880,-3648);
   Print('Second Zone');
   Print('Fight zone');
   Engine.MoveTo(6776,124920,-3648);
   Print('Third Zone');
-  Delay(1000);
+  Delay(5000);
   Engine.MoveTo(7320,124088,-3664);
   Print('Fourth Zone');
   Print('Fight zone');
   Engine.MoveTo(8312,123304,-3696);
   Print('Fifth Zone');
-  Delay(1000);
+  Delay(5000);
   Engine.MoveTo(9160,122872,-3728);
-  Print('Sixth Zone');    
+  Print('Sixth Zone');
+  if InZone(9160,122872,-3728) do    
   Engine.LoadConfig('Autolevel');    // Adrenaline Settings
   Print('Start Farm!');
   Engine.Facecontrol(0, True);
