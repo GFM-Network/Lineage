@@ -69,7 +69,7 @@ begin
   end;
 
   // First spot level 5-20
-  else if ((User.Level >= 5) and (User.Level < 20)) then
+  if ((User.Level >= 5) and (User.Level < 20)) then
   begin
     while (User.Level < 20) do
     begin
@@ -111,7 +111,7 @@ begin
   end;
 
   // First spot level 20-40
-  else if ((User.Level >= 20) and (User.Level < 40)) then
+  if ((User.Level >= 20) and (User.Level < 40)) then
   begin
     while (User.Level < 40) do
     begin
@@ -153,7 +153,7 @@ begin
   end;
 
   // First spot level 40-55
-  else if ((User.Level >= 40) and (User.Level < 55)) then
+  if ((User.Level >= 40) and (User.Level < 55)) then
   begin
     while (User.Level < 55) do
     begin
