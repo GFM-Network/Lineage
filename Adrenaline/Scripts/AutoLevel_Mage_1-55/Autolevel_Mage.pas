@@ -33,7 +33,7 @@ begin
   begin
     while (User.Level < 5) do
     begin
-      Engine.SetTarget(Gremlin);           // TARGET GREMLIN
+      Engine.SetTarget('Gremlin');           // TARGET GREMLIN
       Delay(1000);
       Engine.LoadConfig('Autolevel');      //SETTINGS NAME
       Engine.Facecontrol(0, True);
@@ -77,10 +77,13 @@ begin
       Delay(5000);
       TPath.FFirst;
       Delay(5000);
+      while (User.Level <20) do
+      begin
       Engine.LoadConfig('Autolevel');      //SETTINGS NAME
       Engine.Facecontrol(0, True);
       Delay(1000);
       Print('Leveling up...');
+      end;
 
       if (User.Level >= 20) then
       begin
@@ -119,10 +122,13 @@ begin
       Delay(5000);
       TPath.FSecond;
       Delay(5000);
+      while (User.Level <40) do
+      begin
       Engine.LoadConfig('Autolevel');      //SETTINGS NAME
       Engine.Facecontrol(0, True);
       Delay(1000);
       Print('Leveling up...');
+      end;
 
       if (User.Level >= 40) then
       begin
@@ -161,10 +167,13 @@ begin
       Delay(5000);
       TPath.FThird;
       Delay(5000);
+      while (User.Level <55) do
+      begin
       Engine.LoadConfig('Autolevel');      //SETTINGS NAME
       Engine.Facecontrol(0, True);
       Delay(1000);
       Print('Leveling up...');
+      end;
 
       if (User.Level >= 55) then
       begin
