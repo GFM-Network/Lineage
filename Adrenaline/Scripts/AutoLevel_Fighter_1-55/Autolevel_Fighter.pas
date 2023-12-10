@@ -20,7 +20,7 @@ end;
 // Macro Buff | Mage
 procedure toBuff;
 begin
-  TBuff.FMage;
+  TBuff.FFighter;
   Delay(500);
   toSpot;
 end;
@@ -35,7 +35,7 @@ begin
     begin
       Engine.SetTarget('Gremlin');         // TARGET GREMLIN
       Delay(1000);
-      Engine.LoadConfig('AutolevelMage');      //SETTINGS NAME
+      Engine.LoadConfig('AutolevelFighter');      //SETTINGS NAME
       Engine.Facecontrol(0, True);
       Delay(5000);
       Print('Leveling up...');
@@ -64,7 +64,7 @@ begin
       Delay(5000);
       while (User.Level < 20) do
       begin
-        Engine.LoadConfig('AutolevelMage');  // SETTINGS NAME
+        Engine.LoadConfig('AutolevelFighter');  // SETTINGS NAME
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
@@ -103,7 +103,7 @@ begin
       Delay(5000);
       while (User.Level < 40) do
       begin
-        Engine.LoadConfig('AutolevelMage');  // SETTINGS NAME
+        Engine.LoadConfig('AutolevelFighter');  // SETTINGS NAME
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
@@ -142,7 +142,7 @@ begin
       Delay(5000);
       while (User.Level < 55) do
       begin
-        Engine.LoadConfig('AutolevelMage');  // SETTINGS NAME
+        Engine.LoadConfig('AutolevelFighter');  // SETTINGS NAME
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
@@ -185,7 +185,7 @@ begin    //Loop Script
       Delay(5000);
     end;
   until (User.Level >= 55) or (Engine.Status = lsOffline);
-    Print('Finished AutolevelMage!');    
+    Print('Finished AutolevelFighter!');    
   // Delay after the loop (optional)
   Delay(5000);
 end.
