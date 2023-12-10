@@ -83,6 +83,10 @@ begin
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
+      if (User.HP = 0) then
+        begin
+        TTools.FtoVillageIfDeath;
+        end;  
       end;
 
       if (User.Level >= 20) then
@@ -125,6 +129,10 @@ begin
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
+        if (User.HP = 0) then
+        begin
+        TTools.FtoVillageIfDeath;
+        end;
       end;
 
       if (User.Level >= 40) then
@@ -167,6 +175,10 @@ begin
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
+        if (User.HP = 0) then
+        begin
+        TTools.FtoVillageIfDeath;
+        end;
       end;
 
       if (User.Level >= 55) then
