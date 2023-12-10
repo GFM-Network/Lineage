@@ -41,12 +41,12 @@ begin
   Delay(5000);
   Engine.SetTarget('Milia');  //Target Gatekeeper
   Print('Heading to the Gatekeeper');
-  Delay(5000);
+  Delay(500);
   Engine.DlgOpen; //Open chat
-  Delay(15000);
-  Print('Selecting the spot')
-  Engine.DlgSel(03);
   Delay(10000);
+  Print('Selecting the spot');
+  Engine.DlgSel(03);
+  Delay(500);
   Engine.DlgSel(09);
   Print('Teleporting to First Spot');
   Delay(5000);
@@ -77,7 +77,7 @@ begin
   Delay(500);
   Engine.BypassToServer('_bbsgatekeeper');
   Delay(500);
-  Engine.BypassToServer('_bbsgatekeeper_main-13.htm');
+  Engine.BypassToServer('_bbsgatekeeper_main-20.htm');
   Delay(500);
   Engine.BypassToServer('14');
   Print('Teleporting to Third Spot');
