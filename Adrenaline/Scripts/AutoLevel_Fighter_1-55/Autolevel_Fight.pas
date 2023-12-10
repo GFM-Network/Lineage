@@ -17,7 +17,7 @@ begin
   TTools.FtoVillageIfDeath;
 end;
 
-// Macro Buff | Fighter
+// Macro Buff | Mage
 procedure toBuff;
 begin
   TBuff.FFighter;
@@ -55,7 +55,7 @@ begin
         if (user.target.dead) then
         begin
           while user.incombat do
-            delay(1000);
+            delay(5000);
           engine.autosoulshot(5789, true);
           engine.autotarget(2500);
           engine.attack;
@@ -99,12 +99,9 @@ begin
         // You can add more actions or conditions as needed
         if (user.target.dead) then
         begin
-          while user.incombat do
-            delay(1000);
-          engine.autosoulshot(5789, true);
-          engine.autotarget(2500);
-          engine.attack;
-          engine.pickup;
+          while (User.incombat) do
+            delay(5000);
+          Engine.Facecontrol(0, True);
         end;
       end;
 
@@ -144,12 +141,9 @@ begin
         // You can add more actions or conditions as needed
         if (user.target.dead) then
         begin
-          while user.incombat do
-            delay(1000);
-          engine.autosoulshot(5789, true);
-          engine.autotarget(2500);
-          engine.attack;
-          engine.pickup;
+          while (User.incombat) do
+            delay(5000);
+          Engine.Facecontrol(0, True);
         end;
       end;
 
@@ -189,12 +183,9 @@ begin
         // You can add more actions or conditions as needed
         if (user.target.dead) then
         begin
-          while user.incombat do
-            delay(1000);
-          engine.autosoulshot(5789, true);
-          engine.autotarget(2500);
-          engine.attack;
-          engine.pickup;
+          while (User.incombat) do
+            delay(5000);
+          Engine.Facecontrol(0, True);
         end;
       end;
 
@@ -210,6 +201,15 @@ begin    //Loop Script
   repeat
     toVillageIfDeath;
     toBuff;
+  // Check if the character has reached level 55 or the engine is offline
+    if (User.Level >= 55) or (Engine.Status = lsOffline) then
+    begin
+      // Teleport to a safe zone before stopping the script
+      TTeleport.FTownzone;
+      Delay(5000);
+    end;
   until (User.Level >= 55) or (Engine.Status = lsOffline);
+    Print('Finished AutoLevel!');    
+  // Delay after the loop (optional)
   Delay(5000);
 end.
