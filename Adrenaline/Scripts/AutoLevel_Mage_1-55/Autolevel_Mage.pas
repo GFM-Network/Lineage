@@ -20,8 +20,13 @@ end;
 // Macro Buff | Mage
 procedure toBuff;
 begin
-  TBuff.FMage;
-  Delay(500);
+  IdBuff:= 1323 ; //Check BUFF
+  toVillageIfDeath;
+  while not User.Buffs.ById(IdBuff,obj) do begin
+        Print('Sem Nobles');
+        TBuff.FMage;
+        Delay(500);
+  end;
   toSpot;
 end;
 
@@ -35,7 +40,7 @@ begin
     begin
       Engine.SetTarget('Gremlin');         // TARGET GREMLIN
       Delay(1000);
-      Engine.LoadConfig('AutolevelMage');      //SETTINGS NAME
+      Engine.LoadConfig('AutolevelMageGremilin');      //SETTINGS NAME
       Engine.Facecontrol(0, True);
       Delay(5000);
       Print('Leveling up...');
@@ -58,7 +63,7 @@ begin
   begin
     while (User.Level < 20) do
     begin
-      TTeleport.FFirst;
+      TTeleport.FHumanVilage;
       Delay(5000);
       TPath.FFirst;
       Delay(5000);
@@ -107,6 +112,7 @@ begin
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
+        Engine.LoadZone('AntNestAutoLevelLvL20.zmap');
         if (User.HP = 0) then
         begin
         TTools.FtoVillageIfDeath;
