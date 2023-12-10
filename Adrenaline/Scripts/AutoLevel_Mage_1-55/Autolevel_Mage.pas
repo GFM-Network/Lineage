@@ -40,7 +40,7 @@ begin
     begin
       Engine.SetTarget('Gremlin');         // TARGET GREMLIN
       Delay(1000);
-      Engine.LoadConfig('AutolevelMageGremilin');      //SETTINGS NAME
+      Engine.LoadConfig('AutolevelMage');      //SETTINGS NAME
       Engine.Facecontrol(0, True);
       Delay(5000);
       Print('Leveling up...');
