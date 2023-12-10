@@ -20,7 +20,7 @@ end;
 // Macro Buff | Mage
 procedure toBuff;
 begin
-  TBuff.FFighter;
+  TBuff.FMage;
   Delay(500);
   toSpot;
 end;
@@ -35,7 +35,7 @@ begin
     begin
       Engine.SetTarget('Gremlin');         // TARGET GREMLIN
       Delay(1000);
-      Engine.LoadConfig('Autolevel');      //SETTINGS NAME
+      Engine.LoadConfig('AutolevelMage');      //SETTINGS NAME
       Engine.Facecontrol(0, True);
       Delay(5000);
       Print('Leveling up...');
@@ -46,21 +46,6 @@ begin
         // You can add any final actions before exiting the function
         Engine.Facecontrol(0, False);
         Delay(15000);
-      end;
-
-      if (User.InCombat) then
-      begin
-        Print('Character is in combat, waiting...');
-        // You can add more actions or conditions as needed
-        if (user.target.dead) then
-        begin
-          while user.incombat do
-            delay(5000);
-          engine.autosoulshot(5789, true);
-          engine.autotarget(2500);
-          engine.attack;
-          engine.pickup;
-        end;
       end;
 
       // Once the loop exits, it means User.Level is now 5 or higher
@@ -79,10 +64,16 @@ begin
       Delay(5000);
       while (User.Level < 20) do
       begin
-        Engine.LoadConfig('Autolevel');  // SETTINGS NAME
+        Engine.LoadConfig('AutolevelMage');  // SETTINGS NAME
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
+        if (User.HP = 0) then
+        begin
+        TTools.FtoVillageIfDeath;
+        Delay(15000);
+        toBuff;
+        end;  
       end;
 
       if (User.Level >= 20) then
@@ -90,19 +81,10 @@ begin
         Print('Reached level 20. Exiting the function.');
         // You can add any final actions before exiting the function
         Engine.Facecontrol(0, False);
-        Delay(15000);
-      end;
-
-      if (User.InCombat) then
-      begin
-        Print('Character is in combat, waiting...');
-        // You can add more actions or conditions as needed
-        if (user.target.dead) then
-        begin
-          while (User.incombat) do
-            delay(5000);
-          Engine.Facecontrol(0, True);
-        end;
+        Delay(1000);
+        Engine.Unstuck;
+        Print('Returning to town');
+        Delay(22000);
       end;
 
       // Once the loop exits, it means User.Level is now 20 or higher
@@ -121,10 +103,16 @@ begin
       Delay(5000);
       while (User.Level < 40) do
       begin
-        Engine.LoadConfig('Autolevel');  // SETTINGS NAME
+        Engine.LoadConfig('AutolevelMage');  // SETTINGS NAME
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
+        if (User.HP = 0) then
+        begin
+        TTools.FtoVillageIfDeath;
+        Delay(15000);
+        toBuff;
+        end;
       end;
 
       if (User.Level >= 40) then
@@ -132,19 +120,10 @@ begin
         Print('Reached level 40. Exiting the function.');
         // You can add any final actions before exiting the function
         Engine.Facecontrol(0, False);
-        Delay(15000);
-      end;
-
-      if (User.InCombat) then
-      begin
-        Print('Character is in combat, waiting...');
-        // You can add more actions or conditions as needed
-        if (user.target.dead) then
-        begin
-          while (User.incombat) do
-            delay(5000);
-          Engine.Facecontrol(0, True);
-        end;
+        Delay(1000);
+        Engine.Unstuck;
+        Print('Returning to town');
+        Delay(22000);
       end;
 
       // Once the loop exits, it means User.Level is now 20 or higher
@@ -163,10 +142,16 @@ begin
       Delay(5000);
       while (User.Level < 55) do
       begin
-        Engine.LoadConfig('Autolevel');  // SETTINGS NAME
+        Engine.LoadConfig('AutolevelMage');  // SETTINGS NAME
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
+        if (User.HP = 0) then
+        begin
+        TTools.FtoVillageIfDeath;
+        Delay(15000);
+        toBuff;
+        end;
       end;
 
       if (User.Level >= 55) then
@@ -174,19 +159,10 @@ begin
         Print('Reached level 55. Exiting the function.');
         // You can add any final actions before exiting the function
         Engine.Facecontrol(0, False);
-        Delay(15000);
-      end;
-
-      if (User.InCombat) then
-      begin
-        Print('Character is in combat, waiting...');
-        // You can add more actions or conditions as needed
-        if (user.target.dead) then
-        begin
-          while (User.incombat) do
-            delay(5000);
-          Engine.Facecontrol(0, True);
-        end;
+        Delay(1000);
+        Engine.Unstuck;
+        Print('Returning to town');
+        Delay(22000);
       end;
 
       // Once the loop exits, it means User.Level is now 20 or higher
@@ -209,7 +185,7 @@ begin    //Loop Script
       Delay(5000);
     end;
   until (User.Level >= 55) or (Engine.Status = lsOffline);
-    Print('Finished AutoLevel!');    
+    Print('Finished AutolevelMage!');    
   // Delay after the loop (optional)
   Delay(5000);
 end.
