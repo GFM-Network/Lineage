@@ -45,16 +45,12 @@ begin
       Delay(5000);
       Print('Leveling up...');
 
-      if (User.Level >= 5) then
+      if (User.Level >= 5) then   //Reached Level stop leveling up
       begin
         Print('Reached level 5. Exiting the function.');
-        // You can add any final actions before exiting the function
         Engine.Facecontrol(0, False);
         Delay(15000);
       end;
-
-      // Once the loop exits, it means User.Level is now 5 or higher
-      Engine.Facecontrol(0, False); // Stop attack
     end;
   end;
 
@@ -69,11 +65,12 @@ begin
       Delay(5000);
       while (User.Level < 20) do
       begin
-        Engine.LoadConfig('AutolevelMage');  // SETTINGS NAME
+        Engine.LoadConfig('AutolevelMage');  // Load Adrenaline Settings and start
+        Engine.LoadZone('Lv5-20.zmap');    // Load Adrenaline map zone
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
-        if (User.HP = 0) then
+        if (User.HP = 0) then   // Goes to village if character is dead
         begin
         TTools.FtoVillageIfDeath;
         Delay(15000);
@@ -81,19 +78,15 @@ begin
         end;  
       end;
 
-      if (User.Level >= 20) then
+      if (User.Level >= 20) then    //Reached Level stop leveling up
       begin
         Print('Reached level 20. Exiting the function.');
-        // You can add any final actions before exiting the function
         Engine.Facecontrol(0, False);
         Delay(1000);
         Engine.Unstuck;
         Print('Returning to town');
         Delay(22000);
       end;
-
-      // Once the loop exits, it means User.Level is now 20 or higher
-      Engine.Facecontrol(0, False); // Stop attack
     end;
   end;
 
@@ -108,12 +101,12 @@ begin
       Delay(5000);
       while (User.Level < 40) do
       begin
-        Engine.LoadConfig('AutolevelMage');  // SETTINGS NAME
+        Engine.LoadConfig('AutolevelMage');  // Load Adrenaline Settings and start
+        Engine.LoadZone('Lv20-40.zmap');    // Load Adrenaline map zone
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
-        Engine.LoadZone('AntNestAutoLevelLvL20.zmap');
-        if (User.HP = 0) then
+        if (User.HP = 0) then   // Goes to village if character is dead
         begin
         TTools.FtoVillageIfDeath;
         Delay(15000);
@@ -121,19 +114,15 @@ begin
         end;
       end;
 
-      if (User.Level >= 40) then
+      if (User.Level >= 40) then    //Reached Level stop leveling up
       begin
         Print('Reached level 40. Exiting the function.');
-        // You can add any final actions before exiting the function
         Engine.Facecontrol(0, False);
         Delay(1000);
         Engine.Unstuck;
         Print('Returning to town');
         Delay(22000);
       end;
-
-      // Once the loop exits, it means User.Level is now 20 or higher
-      Engine.Facecontrol(0, False); // Stop attack
     end;
   end;
 
@@ -148,11 +137,12 @@ begin
       Delay(5000);
       while (User.Level < 55) do
       begin
-        Engine.LoadConfig('AutolevelMage');  // SETTINGS NAME
+        Engine.LoadConfig('AutolevelMage');   // Load Adrenaline Settings and start
+        Engine.LoadZone('Lv40-55.zmap');    // Load Adrenaline map zone
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
-        if (User.HP = 0) then
+        if (User.HP = 0) then   // Goes to village if character is dead
         begin
         TTools.FtoVillageIfDeath;
         Delay(15000);
@@ -160,19 +150,15 @@ begin
         end;
       end;
 
-      if (User.Level >= 55) then
+      if (User.Level >= 55) then    //Reached Level stop leveling up
       begin
         Print('Reached level 55. Exiting the function.');
-        // You can add any final actions before exiting the function
         Engine.Facecontrol(0, False);
         Delay(1000);
         Engine.Unstuck;
         Print('Returning to town');
         Delay(22000);
       end;
-
-      // Once the loop exits, it means User.Level is now 20 or higher
-      Engine.Facecontrol(0, False); // Stop attack
     end;
   end;
 end;
@@ -187,11 +173,11 @@ begin    //Loop Script
     if (User.Level >= 55) or (Engine.Status = lsOffline) then
     begin
       // Teleport to a safe zone before stopping the script
-      TTeleport.FTownzone;
-      Delay(5000);
+      Engine.Unstuck;
+      Print('Returning to town');
+      Delay(22000);
     end;
   until (User.Level >= 55) or (Engine.Status = lsOffline);
-    Print('Finished AutolevelMage!');    
-  // Delay after the loop (optional)
-  Delay(5000);
+    Print('Finished AutolevelMage!');
+    Delay(500);
 end.
