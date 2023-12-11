@@ -1,5 +1,4 @@
 unit TPath;
-//fifthfirs
 interface
 
 implementation
