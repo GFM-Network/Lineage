@@ -65,7 +65,7 @@ begin
     begin
       TTeleport.FHumanVilage;
       Delay(5000);
-      TPath.FFirst;
+      TPath.FHumanVilage;
       Delay(5000);
       while (User.Level < 20) do
       begin
@@ -102,9 +102,9 @@ begin
   begin
     while (User.Level < 40) do
     begin
-      TTeleport.FSecond;
+      TTeleport.FAntNest;
       Delay(5000);
-      TPath.FSecond;
+      TPath.FAntNest;
       Delay(5000);
       while (User.Level < 40) do
       begin
@@ -142,9 +142,9 @@ begin
   begin
     while (User.Level < 55) do
     begin
-      TTeleport.FThird;
+      TTeleport.FFieldsofMassacre;
       Delay(5000);
-      TPath.FThird;
+      TPath.FFieldsofMassacre;
       Delay(5000);
       while (User.Level < 55) do
       begin

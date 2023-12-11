@@ -5,7 +5,7 @@ interface
 implementation
 
 
-procedure FFirst;
+procedure FHumanVilage;
 // Move to first spot level 5-20 | Talking Island Obelisk of Victory
 begin
   Print('Fight zone');
@@ -20,7 +20,7 @@ begin
 end;
 
 
-procedure FSecond;
+procedure FAntNest;
 // Move to second spot level 20-40 | Inside Ant Nest
 begin
   Engine.MoveTo(-26012,173699,-4128);
@@ -55,7 +55,7 @@ begin
   Engine.Facecontrol(0, True);
 end;
 
-procedure FThird;
+procedure FFieldsofMassacre;
 // Move to third spot level 40-55 | Fields of Massacre
 begin
   Engine.MoveTo(183614,-14896,-2768);

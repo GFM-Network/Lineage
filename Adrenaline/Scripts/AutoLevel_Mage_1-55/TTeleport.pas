@@ -52,7 +52,7 @@ begin
 end;
 
 // Teleport to second spot level 20-40 | Inside Ant Nest
-procedure FSecond;
+procedure FAntNest;
 begin
   Engine.BypassToServer('_bbsgetfav');
   Delay(500);
@@ -66,7 +66,7 @@ begin
 end;
 
 // Teleport to third spot level 40-55 | Fields of Massacre
-procedure FThird;
+procedure FFieldsofMassacre;
 begin
   Engine.BypassToServer('_bbsgetfav');
   Delay(500);
