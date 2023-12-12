@@ -4,6 +4,7 @@ interface
 
 implementation
 
+//Goes to village if the character is dead
 procedure FtoVillageIfDeath;
 begin
   Delay(100);
@@ -18,11 +19,33 @@ begin
   end;
 end;
 
+//Invite to party if received pm
 procedure FInvitePorPm;
 begin
   if (ChatMessage.Text = '102030') and ChatMessage.Unread then
     if (ChatMessage.ChatType = ctPrivate) then
       Engine.InviteParty(chatmessage.sender);
+end;
+
+//Check if there's an Agr Mob
+procedure HaveAgroMobs(): boolean;
+var
+  i: integer;
+begin
+  result := false;
+  for i := 0 to NpcList.Count - 1 do
+  begin
+    if IsAgr(NpcList(i)) then
+    begin
+      result := true;
+      exit;
+    end;
+  end;
+end;
+
+function IsAgr(Mob: TL2Npc): boolean;
+begin
+  result := (Mob.Target = User) and (not Mob.Dead);
 end;
 
 end.
