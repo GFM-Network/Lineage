@@ -43,11 +43,11 @@ begin
 
       if (User.Level >= 5) then                                           // Reached Level stop leveling up
       begin
-        if (TTools.FHaveAgroMobs) then                                     // if agro mobs are hanging on us, then
+        if (TTools.FHaveAgroMobs) then                                    // if agro mobs are hanging on us, then
         begin                                  
           Engine.Msg('Fighting off mobs', 128);
           Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
-          while (TTools.FHaveAgroMobs) do delay(555);                      // while there are agro mobs - wait for the bot to kill them
+          while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
         end;
         Engine.FaceControl(0, false);                                     // turn off combat in the interface
         Print('Reached level 5. Exiting the function.');
@@ -81,11 +81,11 @@ begin
 
       if (User.Level >= 20) then                                          // Reached Level stop leveling up
       begin
-        if (TTools.FHaveAgroMobs) then                                     // if agro mobs are hanging on us, then
+        if (TTools.FHaveAgroMobs) then                                    // if agro mobs are hanging on us, then
         begin                                  
           Engine.Msg('Fighting off mobs', 128);
           Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
-          while (TTools.FHaveAgroMobs) do delay(555);                      // while there are agro mobs - wait for the bot to kill them
+          while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
         end;
         Engine.FaceControl(0, false);                                     // turn off combat in the interface
         Print('Reached level 20. Exiting the function.');
@@ -119,11 +119,11 @@ begin
 
       if (User.Level >= 40) then                                          //Reached Level stop leveling up
       begin
-        if (TTools.FHaveAgroMobs) then                                     // if agro mobs are hanging on us, then
+        if (TTools.FHaveAgroMobs) then                                    // if agro mobs are hanging on us, then
         begin                                  
           Engine.Msg('Fighting off mobs', 128);
           Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
-          while (TTools.FHaveAgroMobs) do delay(555);                      // while there are agro mobs - wait for the bot to kill them
+          while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
         end;
         Engine.FaceControl(0, false);                                     // turn off combat in the interface
         Print('Reached level 40. Exiting the function.');
@@ -157,11 +157,11 @@ begin
 
       if (User.Level >= 55) then                                          //Reached Level stop leveling up
       begin
-        if (TTools.FHaveAgroMobs) then                                     // if agro mobs are hanging on us, then
+        if (TTools.FHaveAgroMobs) then                                    // if agro mobs are hanging on us, then
         begin                                  
           Engine.Msg('Fighting off mobs', 128);
           Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
-          while (TTools.FHaveAgroMobs) do delay(555);                      // while there are agro mobs - wait for the bot to kill them
+          while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
         end;
         Engine.FaceControl(0, false);                                     // turn off combat in the interface
         Print('Reached level 55. Exiting the function.');
