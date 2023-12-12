@@ -28,7 +28,7 @@ begin
 end;
 
 //Check if character has agro mobs
-procedure HaveAgroMobs(): boolean;
+procedure FHaveAgroMobs(): boolean;
 var
   i: integer;
 begin
