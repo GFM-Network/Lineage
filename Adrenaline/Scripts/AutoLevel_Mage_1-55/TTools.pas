@@ -27,7 +27,7 @@ begin
       Engine.InviteParty(chatmessage.sender);
 end;
 
-//Check if there's an Agr Mob
+//Check if character has agro mobs
 procedure HaveAgroMobs(): boolean;
 var
   i: integer;
