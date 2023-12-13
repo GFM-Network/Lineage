@@ -1,4 +1,0 @@
-begin
-    Engine.bypasstoserver('_bbsloc_sendMultisell 90542');
-    Delay(1800);
-end.
