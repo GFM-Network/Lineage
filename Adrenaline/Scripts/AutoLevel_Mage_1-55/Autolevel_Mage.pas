@@ -45,7 +45,7 @@ begin
       begin
         if (TTools.FHaveAgroMobs) then                                    // if agro mobs are hanging on us, then
         begin                                  
-          Engine.Msg('Fighting off mobs', 128);
+          Print('Fighting off mobs');
           Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
           while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
           Engine.FaceControl(0, false);                                   // turn off combat in the interface
@@ -83,7 +83,7 @@ begin
       begin
         if (TTools.FHaveAgroMobs) then                                    // if agro mobs are hanging on us, then
         begin                                  
-          Engine.Msg('Fighting off mobs', 128);
+          Print('Fighting off mobs');
           Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
           while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
           Engine.FaceControl(0, false);                                   // turn off combat in the interface
@@ -121,7 +121,7 @@ begin
       begin
         if (TTools.FHaveAgroMobs) then                                    // if agro mobs are hanging on us, then
         begin                                  
-          Engine.Msg('Fighting off mobs', 128);
+          Print('Fighting off mobs');
           Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
           while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
           Engine.FaceControl(0, false);                                   // turn off combat in the interface
@@ -159,7 +159,7 @@ begin
       begin
         if (TTools.FHaveAgroMobs) then                                    // if agro mobs are hanging on us, then
         begin                                  
-          Engine.Msg('Fighting off mobs', 128);
+          Print('Fighting off mobs');
           Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
           while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
           Engine.FaceControl(0, false);                                   // turn off combat in the interface
