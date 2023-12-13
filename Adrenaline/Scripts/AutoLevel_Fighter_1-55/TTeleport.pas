@@ -29,21 +29,20 @@ begin
 end;
 
 // Teleport to first spot level 5-20 | Talking Island Obelisk of Victory
-procedure FFirst;
+procedure FHumanVilage;
 begin
-  Engine.BypassToServer('_bbshome');
-  Delay(500);
   Engine.BypassToServer('_bbsgetfav');
   Delay(500);
   Engine.BypassToServer('_bbsgatekeeper');
   Delay(500);
   Engine.BypassToServer('10');
   Delay(5000);
+  Engine.MoveTo(-83112, 244472, -3728);
   Engine.SetTarget('Milia');  //Target Gatekeeper
   Print('Heading to the Gatekeeper');
   Delay(500);
   Engine.DlgOpen; //Open chat
-  Delay(10000);
+  Delay(500);
   Print('Selecting the spot');
   Engine.DlgSel(03);
   Delay(500);
@@ -53,10 +52,8 @@ begin
 end;
 
 // Teleport to second spot level 20-40 | Inside Ant Nest
-procedure FSecond;
+procedure FAntNest;
 begin
-  Engine.BypassToServer('_bbshome');
-  Delay(500);
   Engine.BypassToServer('_bbsgetfav');
   Delay(500);
   Engine.BypassToServer('_bbsgatekeeper');
@@ -69,10 +66,8 @@ begin
 end;
 
 // Teleport to third spot level 40-55 | Fields of Massacre
-procedure FThird;
+procedure FFieldsofMassacre;
 begin
-  Engine.BypassToServer('_bbshome');
-  Delay(500);
   Engine.BypassToServer('_bbsgetfav');
   Delay(500);
   Engine.BypassToServer('_bbsgatekeeper');

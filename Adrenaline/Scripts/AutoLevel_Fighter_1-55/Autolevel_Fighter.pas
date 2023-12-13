@@ -11,45 +11,50 @@ var
 var
   L2Skill: TL2Skill;
 
-// Dead Character goes to village
-procedure toVillageIfDeath;
+procedure toVillageIfDeath;                                               // Dead Character goes to village
 begin
   TTools.FtoVillageIfDeath;
 end;
 
-// Macro Buff | Mage
-procedure toBuff;
+procedure toBuff;                                                         // Macro Buff | Mage
 begin
-  TBuff.FFighter;
-  Delay(500);
+  IdBuff:= 1323 ;                                                         // Check BUFF
+  toVillageIfDeath;
+  while not User.Buffs.ById(IdBuff,obj) do begin
+        Print('Sem Nobles');
+        TBuff.FFighter;
+        Delay(500);
+  end;
   toSpot;
 end;
 
-// Teleport to spot based on level
-procedure toSpot;
+procedure toSpot;                                                         // Teleport to spot based on level
 begin
-  // Kill Gremlins to reach level 5
-  if (User.Level < 5) then
+  if (User.Level < 5) then                                                // Kill Gremlins to reach level 5
   begin
+    Engine.LoadConfig('AutolevelFighter');                                   // SETTINGS NAME
     while (User.Level < 5) do
     begin
-      Engine.SetTarget('Gremlin');         // TARGET GREMLIN
+      Engine.SetTarget('Gremlin');                                        // TARGET GREMLIN
       Delay(1000);
-      Engine.LoadConfig('AutolevelFighter');      //SETTINGS NAME
       Engine.Facecontrol(0, True);
       Delay(5000);
       Print('Leveling up...');
 
-      if (User.Level >= 5) then
+      if (User.Level >= 5) then                                           // Reached Level stop leveling up
       begin
+        if (TTools.FHaveAgroMobs) then                                    // if agro mobs are hanging on us, then
+        begin                                  
+          Print('Fighting off mobs');
+          Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
+          while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
+          Engine.FaceControl(0, false);                                   // turn off combat in the interface
+          while (User.InCombat) do delay(555);                            // waiting for the exit from the combat
+        end;
         Print('Reached level 5. Exiting the function.');
-        // You can add any final actions before exiting the function
-        Engine.Facecontrol(0, False);
-        Delay(15000);
+        Engine.FaceControl(0, false);
+        while (User.InCombat) do delay (555);
       end;
-
-      // Once the loop exits, it means User.Level is now 5 or higher
-      Engine.Facecontrol(0, False); // Stop attack
     end;
   end;
 
@@ -58,17 +63,19 @@ begin
   begin
     while (User.Level < 20) do
     begin
-      TTeleport.FFirst;
+      TTeleport.FHumanVilage;
       Delay(5000);
-      TPath.FFirst;
+      TPath.FHumanVilage;
       Delay(5000);
+      Engine.ClearZone;                                                 // Clear previously loaded zmap
+      Engine.LoadZone('lv5to20');                                       // Load Adrenaline map zone
+      Print('Zone Loaded');
       while (User.Level < 20) do
       begin
-        Engine.LoadConfig('AutolevelFighter');  // SETTINGS NAME
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
-        if (User.HP = 0) then
+        if (User.HP = 0) then                                             // Goes to village if character is dead
         begin
         TTools.FtoVillageIfDeath;
         Delay(15000);
@@ -76,38 +83,41 @@ begin
         end;  
       end;
 
-      if (User.Level >= 20) then
+      if (User.Level >= 20) then                                          // Reached Level stop leveling up
       begin
+        if (TTools.FHaveAgroMobs) then                                    // if agro mobs are hanging on us, then
+        begin                                  
+          Print('Fighting off mobs');
+          Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
+          while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
+          Engine.FaceControl(0, false);                                   // turn off combat in the interface
+          while (User.InCombat) do delay(555);                            // waiting for the exit from the combat
+        end;
         Print('Reached level 20. Exiting the function.');
-        // You can add any final actions before exiting the function
-        Engine.Facecontrol(0, False);
-        Delay(1000);
-        Engine.Unstuck;
-        Print('Returning to town');
-        Delay(22000);
+        Engine.FaceControl(0, false);
+        while (User.InCombat) do delay (555);
       end;
-
-      // Once the loop exits, it means User.Level is now 20 or higher
-      Engine.Facecontrol(0, False); // Stop attack
     end;
   end;
 
-  // First spot level 20-40
+  // Second spot level 20-40
   if ((User.Level >= 20) and (User.Level < 40)) then
   begin
     while (User.Level < 40) do
     begin
-      TTeleport.FSecond;
+      TTeleport.FAntNest;
       Delay(5000);
-      TPath.FSecond;
+      TPath.FAntNest;
       Delay(5000);
+      Engine.ClearZone;                                                 // Clear previously loaded zmap
+      Engine.LoadZone('lv20to40');                                      // Load Adrenaline map zone
+      Print('Zone Loaded');
       while (User.Level < 40) do
       begin
-        Engine.LoadConfig('AutolevelFighter');  // SETTINGS NAME
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
-        if (User.HP = 0) then
+        if (User.HP = 0) then                                             // Goes to village if character is dead
         begin
         TTools.FtoVillageIfDeath;
         Delay(15000);
@@ -115,38 +125,41 @@ begin
         end;
       end;
 
-      if (User.Level >= 40) then
+      if (User.Level >= 40) then                                          //Reached Level stop leveling up
       begin
+        if (TTools.FHaveAgroMobs) then                                    // if agro mobs are hanging on us, then
+        begin                                  
+          Print('Fighting off mobs');
+          Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
+          while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
+          Engine.FaceControl(0, false);                                   // turn off combat in the interface
+          while (User.InCombat) do delay(555);                            // waiting for the exit from the combat
+        end;
         Print('Reached level 40. Exiting the function.');
-        // You can add any final actions before exiting the function
-        Engine.Facecontrol(0, False);
-        Delay(1000);
-        Engine.Unstuck;
-        Print('Returning to town');
-        Delay(22000);
+        Engine.FaceControl(0, false);
+        while (User.InCombat) do delay (555);
       end;
-
-      // Once the loop exits, it means User.Level is now 20 or higher
-      Engine.Facecontrol(0, False); // Stop attack
     end;
   end;
 
-  // First spot level 40-55
-  if ((User.Level >= 40) and (User.Level < 55)) then
+  // Third spot level 40-55
+  if ((User.Level >= 40) and (User.Level < 55)) then                        
   begin
     while (User.Level < 55) do
     begin
-      TTeleport.FThird;
+      TTeleport.FFieldsofMassacre;
       Delay(5000);
-      TPath.FThird;
+      TPath.FFieldsofMassacre;
       Delay(5000);
+      Engine.ClearZone;                                                 // Clear previously loaded zmap
+      Engine.LoadZone('lv40to55');                                      // Load Adrenaline map zone
+      Print('Zone Loaded');
       while (User.Level < 55) do
       begin
-        Engine.LoadConfig('AutolevelFighter');  // SETTINGS NAME
         Engine.Facecontrol(0, True);
         Delay(5000);
         Print('Leveling up...');
-        if (User.HP = 0) then
+        if (User.HP = 0) then                                             // Goes to village if character is dead
         begin
         TTools.FtoVillageIfDeath;
         Delay(15000);
@@ -154,38 +167,38 @@ begin
         end;
       end;
 
-      if (User.Level >= 55) then
+      if (User.Level >= 55) then                                          //Reached Level stop leveling up
       begin
+        if (TTools.FHaveAgroMobs) then                                    // if agro mobs are hanging on us, then
+        begin                                  
+          Print('Fighting off mobs');
+          Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
+          while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
+          Engine.FaceControl(0, false);                                   // turn off combat in the interface
+          while (User.InCombat) do delay(555);                            // waiting for the exit from the combat
+        end;
         Print('Reached level 55. Exiting the function.');
-        // You can add any final actions before exiting the function
-        Engine.Facecontrol(0, False);
-        Delay(1000);
-        Engine.Unstuck;
-        Print('Returning to town');
-        Delay(22000);
+        Engine.FaceControl(0, false);
+        while (User.InCombat) do delay (555);
       end;
-
-      // Once the loop exits, it means User.Level is now 20 or higher
-      Engine.Facecontrol(0, False); // Stop attack
     end;
   end;
 end;
 
 //-----------------------------------------------------------------------------
-begin    //Loop Script
+begin                                                                     //Loop Script
   Print('Repeat Script');
   repeat
     toVillageIfDeath;
     toBuff;
-  // Check if the character has reached level 55 or the engine is offline
-    if (User.Level >= 55) or (Engine.Status = lsOffline) then
+    if (User.Level >= 55) or (Engine.Status = lsOffline) then             // Check if the character has reached level 55 or the engine is offline
     begin
-      // Teleport to a safe zone before stopping the script
-      TTeleport.FTownzone;
-      Delay(5000);
+      Engine.Unstuck;                                                     // Teleport to a safe zone before stopping the script
+      Print('Returning to town');
+      Delay(22000);
     end;
   until (User.Level >= 55) or (Engine.Status = lsOffline);
-    Print('Finished AutolevelFighter!');    
-  // Delay after the loop (optional)
-  Delay(5000);
+    Engine.FaceControl(0, false);
+    Print('Finished AutolevelFighter!');
+    Delay(500);
 end.
