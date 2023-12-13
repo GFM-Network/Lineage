@@ -68,6 +68,7 @@ begin
       while (User.Level < 20) do
       begin
         Engine.LoadConfig('AutolevelMage');                               // Load Adrenaline Settings and start
+        Engine.ClearZone;                                                 // Clear previously loaded zmap
         Engine.LoadZone('Lv5-20.zmap');                                   // Load Adrenaline map zone
         Engine.Facecontrol(0, True);
         Delay(5000);
@@ -107,6 +108,7 @@ begin
       while (User.Level < 40) do
       begin
         Engine.LoadConfig('AutolevelMage');                               // Load Adrenaline Settings and start
+        Engine.ClearZone;                                                 // Clear previously loaded zmap
         Engine.LoadZone('Lv20-40.zmap');                                  // Load Adrenaline map zone
         Engine.Facecontrol(0, True);
         Delay(5000);
@@ -146,6 +148,7 @@ begin
       while (User.Level < 55) do
       begin
         Engine.LoadConfig('AutolevelMage');                               // Load Adrenaline Settings and start
+        Engine.ClearZone;                                                 // Clear previously loaded zmap
         Engine.LoadZone('Lv40-55.zmap');                                  // Load Adrenaline map zone
         Engine.Facecontrol(0, True);
         Delay(5000);
