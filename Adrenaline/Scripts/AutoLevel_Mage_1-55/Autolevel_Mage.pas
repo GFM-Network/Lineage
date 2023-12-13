@@ -110,7 +110,6 @@ begin
       Delay(5000);
       TPath.FAntNest;
       Delay(5000);
-      Engine.LoadConfig('AutolevelMage');                               // Load Adrenaline Settings and start
       Engine.ClearZone;                                                 // Clear previously loaded zmap
       Engine.LoadZone('lv20to40');                                      // Load Adrenaline map zone
       Print('Zone Loaded');
@@ -153,7 +152,6 @@ begin
       Delay(5000);
       TPath.FFieldsofMassacre;
       Delay(5000);
-      Engine.LoadConfig('AutolevelMage');                               // Load Adrenaline Settings and start
       Engine.ClearZone;                                                 // Clear previously loaded zmap
       Engine.LoadZone('lv40to55');                                      // Load Adrenaline map zone
       Print('Zone Loaded');
