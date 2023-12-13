@@ -49,6 +49,7 @@ begin
           Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
           while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
           Engine.FaceControl(0, false);                                   // turn off combat in the interface
+          while (User.InCombat) do delay(555);                            // waiting for the exit from the combat
         end;
         Print('Reached level 5. Exiting the function.');
       end;
@@ -87,6 +88,7 @@ begin
           Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
           while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
           Engine.FaceControl(0, false);                                   // turn off combat in the interface
+          while (User.InCombat) do delay(555);                            // waiting for the exit from the combat
         end;
         Print('Reached level 20. Exiting the function.');
       end;
@@ -125,6 +127,7 @@ begin
           Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
           while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
           Engine.FaceControl(0, false);                                   // turn off combat in the interface
+          while (User.InCombat) do delay(555);                            // waiting for the exit from the combat
         end;
         Print('Reached level 40. Exiting the function.');
       end;
@@ -163,6 +166,7 @@ begin
           Engine.FaceControl(0, true);                                    // turn on combaat in the interface 
           while (TTools.FHaveAgroMobs) do delay(555);                     // while there are agro mobs - wait for the bot to kill them
           Engine.FaceControl(0, false);                                   // turn off combat in the interface
+          while (User.InCombat) do delay(555);                            // waiting for the exit from the combat
         end;
         Print('Reached level 55. Exiting the function.');
       end;
