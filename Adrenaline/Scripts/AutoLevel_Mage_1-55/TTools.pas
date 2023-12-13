@@ -28,7 +28,7 @@ begin
 end;
 
 //Check if character has agro mobs
-procedure FHaveAgroMobs(): boolean;
+function FHaveAgroMobs(): boolean;
 var
   i: integer;
 begin
