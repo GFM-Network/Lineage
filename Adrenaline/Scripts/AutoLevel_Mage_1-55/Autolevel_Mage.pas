@@ -1,3 +1,28 @@
+(*Automated Character Leveling Script for Lineage 2
+
+Developed by: BlacksTar / Sony
+
+Purpose:
+This script automates the character leveling up process from level 1 to 55 in Lineage 2. 
+It is designed to streamline the leveling experience by handling the application of 
+buffs (TBuff) and teleporting (TTeleport) the character based on the specific server settings.
+
+Usage:
+1. Configure the server-specific parameters (TBuff, TTeleport) below according to the server you're playing on.
+2. Run the script to initiate the automated leveling process.
+
+Server Configuration Parameters:
+- TBuff: Dictionary containing the buffs and their durations for the character.
+- TTeleport: Dictionary mapping locations to teleport the character based on leveling zones.
+
+Note: Ensure that you have the necessary permissions and comply with the server's rules 
+when using automation scripts.
+
+Disclaimer:
+This script is provided as-is and should be used responsibly. 
+Usage may be subject to server rules and policies. 
+The developer is not responsible for any consequences arising from the use of this script.*)
+
 uses
   SysUtils, TBuff, TTeleport, TPath, TTools;
 
