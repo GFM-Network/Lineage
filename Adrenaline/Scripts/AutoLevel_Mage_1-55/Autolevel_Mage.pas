@@ -201,6 +201,7 @@ begin                                                                     //Loop
       Delay(22000);
     end;
   until (User.Level >= 55) or (Engine.Status = lsOffline);
+    Engine.FaceControl(0, false);
     Print('Finished AutolevelMage!');
     Delay(500);
 end.
