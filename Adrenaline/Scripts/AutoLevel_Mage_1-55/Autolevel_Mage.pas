@@ -52,6 +52,8 @@ begin
           while (User.InCombat) do delay(555);                            // waiting for the exit from the combat
         end;
         Print('Reached level 5. Exiting the function.');
+        Engine.FaceControl(0, false);
+        while (User.InCombat) do delay (555);
       end;
     end;
   end;
@@ -93,6 +95,8 @@ begin
           while (User.InCombat) do delay(555);                            // waiting for the exit from the combat
         end;
         Print('Reached level 20. Exiting the function.');
+        Engine.FaceControl(0, false);
+        while (User.InCombat) do delay (555);
       end;
     end;
   end;
@@ -134,6 +138,8 @@ begin
           while (User.InCombat) do delay(555);                            // waiting for the exit from the combat
         end;
         Print('Reached level 40. Exiting the function.');
+        Engine.FaceControl(0, false);
+        while (User.InCombat) do delay (555);
       end;
     end;
   end;
@@ -175,6 +181,8 @@ begin
           while (User.InCombat) do delay(555);                            // waiting for the exit from the combat
         end;
         Print('Reached level 55. Exiting the function.');
+        Engine.FaceControl(0, false);
+        while (User.InCombat) do delay (555);
       end;
     end;
   end;

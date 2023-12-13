@@ -59,9 +59,7 @@ procedure FFieldsofMassacre;
 begin
   Engine.MoveTo(183614,-14896,-2768);
   Print('First Zone');
-  Delay(4000);
-  Engine.MoveTo(183096,-13848,-2808);
-  Delay(4000);  
+  Delay(4000); 
   Print('Fight zone');
   Engine.LoadConfig('AutolevelMage');    // Adrenaline Settings
   Print('Start Farm!');
