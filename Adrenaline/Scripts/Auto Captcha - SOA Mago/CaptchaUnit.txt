@@ -1,0 +1,143 @@
+unit CaptchaUnit;
+interface
+implementation
+
+function allDead():boolean;
+var
+i:integer;
+begin
+result:= true;
+ for i:= 0 to party.chars.count -1 do begin
+  if (not party.chars.items(i).dead) then begin
+   result:= false;
+   break;
+  end;
+ end;
+end;
+
+procedure allToVillage;
+var
+Control : TL2Control;
+i : Integer;
+begin
+ while delay(1111) do begin
+  if allDead then begin
+   for i:= 0 to party.chars.count -1 do begin
+    Control := GetControl(Party.Chars.items(i).name);
+    if Assigned(Control) then Control.gohome;
+   end;
+  engine.gohome;
+  end;
+ end;
+end;
+
+procedure gosoa;
+begin
+while Engine.Status = lsOnline do begin delay(1000);
+if (ChatMessage.Text = 'soa') and ChatMessage.Unread then
+if (ChatMessage.ChatType = ctParty) then
+begin
+engine.bypasstoserver('_bbshome');delay(500); // ????? ? ??? 
+engine.bypasstoserver('01');delay(500);
+engine.bypasstoserver('08');delay(500);
+engine.bypasstoserver('037');delay(500);   // ????? ? ??? 
+end;
+end;
+end;
+
+
+function together():boolean;
+var i:integer;
+begin
+result:= true;
+  for i:= 0 to party.chars.count -1 do begin
+    if (user.distto(party.chars.items(i)) > 500) then begin
+      result:= false;
+      break;
+    end;
+  end;
+end;
+
+procedure vladik;
+var         
+Control : TL2Control;         
+i : Integer;
+begin
+while true do begin delay(1500);
+
+if  together and user.inrange(-177640, 181976, -15496,500) then begin
+
+for i := 0 to Party.Chars.Count - 1 do begin
+
+Control := GetControl(Party.Chars.items(i).name);
+
+if Assigned(Control) then Control.facecontrol(0,true);
+engine.clearzone;
+engine.facecontrol(0,true);
+end;
+end;
+end;
+end;
+
+
+
+
+
+ procedure insoa;
+ begin
+ while true do begin delay(1500);
+if ( user.inrange(-175474, 154573, 2728,900) or user.inrange(-178392, 153416, 2488,1500) ) then begin
+ engine.facecontrol(0,false);
+   Engine.MoveTo(-176312+50, 153640+50, 2712+50);
+   Engine.MoveTo(-177256+50, 153592+50, 2704+50);
+   Engine.MoveTo(-178392, 153416, 2488);
+   engine.settarget(32734);
+   engine.dlgopen;
+   engine.dlgsel(1);delay(100);
+   Engine.MoveTo(-179608, 186504, -10664);
+Engine.MoveTo(-179208, 186840, -10704);
+Engine.MoveTo(-178872, 187096, -10704);
+Engine.MoveTo(-178952, 187432, -10704);
+Engine.MoveTo(-179000, 187720, -10720);
+Engine.MoveTo(-178776, 187944, -10736);
+Engine.MoveTo(-180248, 181912, -15096);
+Engine.MoveTo(-179800, 181800, -15136);
+Engine.MoveTo(-178904, 182008, -15304);
+Engine.MoveTo(-177640, 181976, -15496);
+
+   end;
+   end;
+   end;
+   
+procedure rebuff;
+begin
+while Engine.Status = lsOnline do begin delay(1000);
+if (ChatMessage.Text = 'rebuf') and ChatMessage.Unread then
+if (ChatMessage.ChatType = ctParty) then begin 
+engine.bypasstoserver('_bbshome');delay(1000);
+engine.bypasstoserver('01');delay(1000);
+engine.bypasstoserver('01');delay(1000);
+end;
+end;
+end;
+procedure gorod;
+begin
+while Engine.Status = lsOnline do begin delay(1000);
+if (ChatMessage.Text = 'gorod') and ChatMessage.Unread then
+if (ChatMessage.ChatType = ctParty) then
+engine.gohome;
+end;
+end;
+
+
+procedure Start;
+begin 
+script.newthread(@allToVillage);
+script.newthread(@rebuff);
+script.newthread(@vladik);
+script.newthread(@gorod);
+script.newthread(@insoa);
+script.newthread(@gosoa);
+end;
+
+end.

@@ -1,0 +1,8 @@
+uses SysUtils, Classes;
+var A:TStringList;
+begin
+  A:= TStringList.create;
+  A.Text:= Engine.CbText;
+  A.SaveToFile(Script.Path + 'CbText.txt');
+  A.Free;
+end.

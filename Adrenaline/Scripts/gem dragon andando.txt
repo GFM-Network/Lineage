@@ -1,0 +1,174 @@
+var
+item: TL2Item;
+buff: TL2Buff;
+
+function buffCheck: Boolean;
+begin
+    if not User.Buffs.ByID(1085, buff) then begin
+        Result:=true;
+        Print('Tem que buffar, buffando...');
+        Delay(1000);
+      Engine.bypasstoserver('_bbshome'); 
+                Delay(1000);
+                      Engine.bypasstoserver('13'); 
+                Delay(1000);
+                      Engine.bypasstoserver('15d'); 
+                Delay(1000);
+                      Engine.bypasstoserver('115');
+                Delay(1000);
+                      Engine.bypasstoserver('128'); 
+    end;
+Result:=false;
+end;
+
+function deadCheck: Boolean;
+begin
+Result := false;
+    if User.Dead then begin
+        Result := true;
+        Print('Morto. To village.');
+        Delay(2000);
+        Engine.FaceControl(0,false);
+        Engine.GoHome;
+        Delay(10000);
+    end;
+end;
+
+begin
+while true do begin
+delay(150);
+
+if user.inrange(116635, 76236, -2720, 5000) and inventory.user.byid(57, item) or (item.count>100000000) then begin
+Print('enviando.');
+engine.SendMail('nikel','e','e ',([57,100000000, 9546, 100, 6622, 100, 1890, 300, 17248, 50, 9630, 300, 6578, 5]));   
+end;
+
+    if not inventory.user.byid(8599, item) or (item.count<1) then begin 
+      Delay(1000);
+        Engine.bypasstoserver('_bbshome'); 
+            Delay(1000);
+      Engine.bypasstoserver('11'); 
+      Delay(1000);
+              Engine.bypasstoserver('11f');
+      Delay(1000);
+      Engine.NPCExchange(8599, 15); 
+      Print('PENALTY OK');
+      delay(1000);
+end;
+
+    if not inventory.user.byid(728, item) or (item.count<300) then begin 
+      Delay(1000);
+        Engine.bypasstoserver('_bbshome'); 
+            Delay(1000);
+      Engine.bypasstoserver('11'); 
+      Delay(1000);
+              Engine.bypasstoserver('11f');
+      Delay(1000);
+      Engine.NPCExchange(728, 700); 
+      Print('MANA OK');
+      delay(1000);
+end;
+
+    if not inventory.user.byid(3952, item) or (item.count<3000) then begin
+      Delay(1000);
+        Engine.bypasstoserver('_bbshome'); 
+            Delay(1000);
+      Engine.bypasstoserver('11'); 
+      Delay(1000);
+              Engine.bypasstoserver('11c');
+      Delay(1000);
+      Engine.NPCExchange(3952, 7000);
+      Print('SSa OK');
+      delay(1000);
+end;
+
+    if user.inrange(116499, 76299, -2720, 5000) then begin  
+  Print('Voltando para hunter.');
+    Delay(2000);
+  Engine.bypasstoserver('_bbshome'); 
+  Delay(1500);
+  Engine.bypasstoserver('16');
+  Delay(1000);
+    Engine.bypasstoserver('118');
+      Delay(1000);
+    Engine.bypasstoserver('18');
+      Delay(5000);
+  end;
+
+        if user.inrange(116635, 76236, -2720, 5000) and user.buffs.byid(1085, buffCheck) then begin
+  Print('Voltando ao spot.');
+      delay(4000);
+     Engine.MoveTo(117112, 76776, -2680);
+     engine.settarget(32864);
+     delay(1000);
+     engine.dlgopen;
+     delay(1000);
+     engine.dlgsel(2);
+         delay(4000);
+    end;
+
+                if user.inrange(99138, 110311, -3680, 5000) then begin
+ Engine.MoveTo(98168, 109528, -3712);
+Engine.MoveTo(96712, 109736, -3648);
+ Engine.MoveTo(96645, 110737, -3712);
+ Engine.MoveTo(96404, 111708, -3371);
+ Engine.MoveTo(95617, 112201, -3061);
+ 
+
+
+ 
+
+         end;
+    
+       if user.inrange(113160, 121009, -3696, 5000) then begin  // baixo gem começo        
+     Delay(2000);
+     Engine.FaceControl(0,true);
+    while not deadCheck do delay(5000);
+         end;
+   
+    if user.inrange(93528, 109624, -3656, 5000) then begin  // baixo gem meio        
+     Delay(2000);
+     Engine.FaceControl(0,true);
+    while not deadCheck do delay(5000);
+         end;
+
+             if user.inrange(91144, 110488, -3776, 5000) then begin  //baixo gem final
+     Delay(2000);
+     Engine.FaceControl(0,true);
+    while not deadCheck do delay(5000);
+         end;
+
+               if user.inrange(95400, 107688, -3072, 5000) then begin  //cima corredor começo
+     Delay(2000);
+     Engine.FaceControl(0,true);
+    while not deadCheck do delay(5000);
+         end;
+
+                 if user.inrange(92344, 107688, -3016, 5000) then begin  //cima corredor final
+     Delay(2000);
+     Engine.FaceControl(0,true);
+    while not deadCheck do delay(5000);
+         end;
+
+                      if user.inrange(90376, 107544, -3088, 5000) then begin  //cima perto emeralds
+     Delay(2000);
+     Engine.FaceControl(0,true);
+    while not deadCheck do delay(5000);
+         end;
+
+                               if user.inrange(87080, 107992, -3120, 5000) then begin  //cima emeralds
+     Delay(2000);
+     Engine.FaceControl(0,true);
+    while not deadCheck do delay(5000);
+         end;
+
+                                 if user.inrange(81108, 109505, -3040, 5000) then begin  //cima emeralds
+     Delay(2000);
+     Engine.FaceControl(0,true);
+    while not deadCheck do delay(5000);
+         end;
+
+
+         
+    end;
+end.

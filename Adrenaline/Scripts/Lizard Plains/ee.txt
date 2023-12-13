@@ -1,0 +1,291 @@
+procedure lizardplains; //edit for your server
+begin
+   engine.bypasstoserver('_bbshome');
+   delay(1000);
+   engine.bypasstoserver('012');
+   delay(1000);
+   engine.bypasstoserver('023');
+   delay(1000);
+   engine.bypasstoserver('0b');
+   delay(5000);
+end;
+
+procedure takeBuffs; //edit for your server
+begin
+   engine.bypasstoserver('_bbshome');
+   Delay(1000);
+   engine.bypasstoserver('013');
+   Delay(1000);
+   engine.bypasstoserver('0d');
+   Delay(1000);
+end;
+
+function captcha: boolean;
+function SetForegroundWindow(hwnd: integer) : Boolean; stdcall; external 'user32.dll';
+begin
+   if engine.dlgtext.contains('Refresh') or engine.dlgtext.contains('Captcha') or engine.dlgtext.contains('60 seconds') or engine.dlgtext.contains('Bot') then begin
+      SetForegroundWindow(engine.GameWindow);             
+      PlaySound(exepath+'\sounds\'+'PlayerAlarm'+'.wav');
+      delay(3000); 
+      StopSound;
+   end;   
+end;
+
+procedure startquest;
+begin
+   engine.MoveTo(86504, 86072, -2864);
+   delay(500);
+   engine.settarget(32741);
+   engine.dlgopen;
+   engine.dlgsel('Quest');
+   delay(500);
+   engine.dlgsel(1);
+   delay(500);
+   engine.dlgsel(1);
+   delay(1000);
+   engine.MoveTo(86520, 85816, -2872);
+   delay(500);
+   engine.settarget(32744);
+   engine.dlgopen;
+   delay(500);
+   engine.dlgsel('Quest');
+   delay(500);
+   engine.dlgsel(1);
+   delay(500);
+   engine.dlgsel(1);
+   delay(500);
+   engine.dlgsel(1);
+end;
+
+procedure tospot;
+begin
+   engine.MoveTo(88584,85768,-3152);
+   engine.MoveTo(89448,85176,-3312);
+   engine.MoveTo(90376,84456,-3504);
+   engine.MoveTo(90936,83944,-3568);
+   engine.MoveTo(92360,81912,-3504);
+   engine.MoveTo(93032,79896,-3312);
+   delay(1000);
+   engine.LoadZone(exepath+'\Settings\'+'farm'+'.zmap');
+   engine.FaceControl(0,true);
+end;
+
+procedure toraid;
+begin
+   engine.MoveTo(93240,80104,-3312);
+   engine.MoveTo(93912,81224,-3360);
+   engine.MoveTo(94152,82296,-3520);
+   engine.MoveTo(94616,83528,-3424);
+   engine.MoveTo(94840,83560,-3408);
+end;
+
+procedure raidas;
+begin
+   engine.MoveTo(88264,85592,-3136);
+   engine.MoveTo(88936,85528,-3200);
+   engine.MoveTo(89960,84904,-3440);
+   engine.MoveTo(94232,83368,-3520);
+   engine.MoveTo(94664,83528,-3424);
+   engine.MoveTo(94824,83576,-3408);
+end;
+
+procedure outrb;
+begin
+   engine.FaceControl(0,false);
+   engine.MoveTo(95720, 85688, -3712);
+   engine.settarget(32740);
+   engine.dlgopen;
+   engine.dlgsel(1);
+   delay(3000);
+   teleportLizardman;
+end;
+
+procedure takeandtele;
+begin
+   engine.settarget(32740);
+   engine.dlgopen;
+   delay(500);
+   engine.dlgsel('Quest');
+   delay(500);
+   engine.dlgsel(1);
+   delay(1000);
+   engine.dlgopen;
+   engine.dlgsel(2);
+   delay(1000);
+   engine.LoadZone(exepath+'\Settings\'+'raid'+'.zmap');
+   engine.FaceControl(0,true);
+end;
+
+procedure endquest;
+begin
+   engine.MoveTo(86744, 85832, -2912);
+   engine.MoveTo(86568, 85912, -2872);
+   engine.MoveTo(86504, 86088, -2864);
+   delay(500);
+   engine.settarget(32741);
+   engine.dlgopen;
+   engine.dlgsel('Quest');
+   delay(500);
+   engine.dlgsel(1);
+end;
+
+procedure townCheck;
+begin
+if User.inrange(80334,54400,-1552, 250, 150) then begin
+      engine.MoveTo(80334,54400,-1552);
+      engine.MoveTo(80969,53698,-1558);
+      engine.MoveTo(81540,53454,-1494);
+      engine.MoveTo(82480,53340,-1494);   
+      engine.MoveTo(82950,53186,-1494);
+    end;
+    if User.inrange(82323,55466,-1520, 250, 150) then begin
+      engine.MoveTo(82323,55466,-1520);
+      engine.MoveTo(82403,54498,-1523);
+      engine.MoveTo(82589,53861,-1486);   
+      engine.MoveTo(82950,53186,-1494);
+    end;
+    if User.inrange(82123,53535,-1488, 250, 150) then begin
+      engine.MoveTo(82123,53535,-1488);   
+      engine.MoveTo(82950,53186,-1494);
+    end;
+    if User.inrange(80304,56241,-1552, 250, 150) then begin
+      engine.MoveTo(80304,56241,-1552);
+      engine.MoveTo(81470,55682,-1523);
+      engine.MoveTo(82256,55294,-1523);
+      engine.MoveTo(82510,54035,-1494);   
+      engine.MoveTo(82950,53186,-1494);
+    end;
+    if User.inrange(82445,56012,-1520, 250, 150) then begin
+      engine.MoveTo(82445,56012,-1520);
+      engine.MoveTo(82341,54950,-1523);
+      engine.MoveTo(82574,53833,-1486); 
+      engine.MoveTo(82950,53186,-1494);
+    end;
+    if User.inrange(80054,53209,-1552, 250, 150) then begin
+      engine.MoveTo(80054,53209,-1552);
+      engine.MoveTo(80624,53611,-1558);
+      engine.MoveTo(81772,53468,-1494);
+      engine.MoveTo(82289,53472,-1494);
+      engine.MoveTo(82950,53186,-1494);
+    end;
+    if User.inrange(80513,52980,-1552, 250, 150) then begin
+      engine.MoveTo(80513,52980,-1552);
+      engine.MoveTo(80165,53065,-1558);
+      engine.MoveTo(80630,53610,-1558);
+      engine.MoveTo(81688,53447,-1494);
+      engine.MoveTo(82303,53338,-1494);   
+      engine.MoveTo(82950,53186,-1494);
+    end;
+    if User.inrange(80267,55497,-1552, 250, 150) then begin
+      engine.MoveTo(80267,55497,-1552);
+      engine.MoveTo(80359,54536,-1558);
+      engine.MoveTo(80792,53785,-1558);
+      engine.MoveTo(81495,53421,-1494);
+      engine.MoveTo(82323,53362,-1494);
+      engine.MoveTo(82950,53186,-1494);
+    end;
+    if User.inrange(79933,55752,-1552, 250, 150) then begin
+      engine.MoveTo(79933,55752,-1552);
+      engine.MoveTo(80349,55208,-1558);
+      engine.MoveTo(80470,54217,-1558);
+      engine.MoveTo(81053,53602,-1558);
+      engine.MoveTo(81974,53465,-1494);   
+      engine.MoveTo(82950,53186,-1494);
+    end;
+   if User.inrange(80594,55837,-1552, 250, 150) then begin
+      engine.MoveTo(80594,55837,-1552);
+      engine.MoveTo(81899,55492,-1523);
+      engine.MoveTo(82240,55142,-1523);
+      engine.MoveTo(82531,53946,-1494);   
+      engine.MoveTo(82950,53186,-1494);
+    end;
+    if User.inrange(82213,53964,-1488, 250, 150) then begin
+      engine.MoveTo(82213,53964,-1488);
+      engine.MoveTo(82668,53709,-1486); 
+      engine.MoveTo(82950,53186,-1494);
+    end;
+    if User.inrange(83327,55410,-1520, 250, 150) then begin
+      engine.MoveTo(83327,55410,-1520);
+      engine.MoveTo(82607,55592,-1523);
+      engine.MoveTo(82184,54809,-1523);
+      engine.MoveTo(82563,53882,-1488);   
+      engine.MoveTo(82950,53186,-1494);
+    end;
+    if User.inrange(79706,52986,-1552, 250, 150) then begin
+      engine.MoveTo(79706,52986,-1552);
+      engine.MoveTo(80427,53549,-1558);
+      engine.MoveTo(80812,53655,-1558);
+      engine.MoveTo(81979,53439,-1494);   
+      engine.MoveTo(82950,53186,-1494);
+    end;
+    if User.inrange(82880,55390,-1520, 250, 150) then begin
+      engine.MoveTo(82880,55390,-1520);
+      engine.MoveTo(82375,55524,-1523);
+      engine.MoveTo(82367,54313,-1493);
+      engine.MoveTo(82651,53734,-1486);   
+      engine.MoveTo(82950,53186,-1494);
+    end;
+    if User.inrange(82552,53447,-1488, 250, 150) then begin
+      engine.MoveTo(82552,53447,-1488);   
+      engine.MoveTo(82950,53186,-1494);
+    end;
+    if User.inrange(82638,53885,-1488, 250, 150) then begin
+      engine.MoveTo(82638,53885,-1488);   
+      engine.MoveTo(82950,53186,-1494);
+    end;
+end;
+
+function buffCheck: Boolean;
+var buff: TL2Buff;
+begin
+    if not User.Buffs.ByID(1388, buff) or (buff.EndTime < 1800000) then begin
+        Result:=true;
+        Print('Buffs are needed. Buffing...');
+        //engine.MoveTo(86456, 86360, -2864);
+        //Delay(500);
+        takeBuffs;
+        Print('Buffed.');
+        //engine.MoveTo(86472, 86088, -2864);
+    end;
+Result:=false;
+end;
+
+procedure quest;
+var buff:tl2buff;
+item: tl2item;
+begin
+   if(User.Dead) then begin
+        Print('Dead. Pressing to village.');
+         engine.FaceControl(0, false);
+         engine.GoHome;
+   end;
+   if User.inrange(87341, 85471, -3080, 500) or User.inrange(86504, 86088, -2880, 250)  then begin
+      buffCheck;
+      if (not engine.QuestStatus(288, 1)) then startquest;
+      if engine.QuestStatus(288, 3) then endquest;
+   end;
+   if user.inrange(86520, 85816, -2872, 250) and (engine.QuestStatus(423, 1)) then begin
+      tospot;
+   end;
+   if (engine.QuestStatus(423, 2)) then begin
+      engine.FaceControl(0,false);
+      toraid;
+   end;
+   if user.inrange(94824, 83576, -3408, 250) and (engine.QuestStatus(423, 2)) then begin 
+      takeandtele;                 
+   end;
+   if User.inrange(96680, 85512, -3712, 800) and (engine.QuestStatus(288, 3)) or (engine.QuestStatus(288, 2)) then begin 
+      outrb;                                             
+   end;
+end;
+
+begin
+   while (engine.status = lsOnline) do begin
+      delay(300);
+      quest();
+      delay(300);
+      captcha();
+      delay(300);
+      townCheck();
+   end;
+end.

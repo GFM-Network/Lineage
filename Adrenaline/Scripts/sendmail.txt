@@ -1,0 +1,21 @@
+var
+item: TL2Item;
+buff: TL2Buff;
+
+function ItemCheck: boolean;
+begin
+if inventory.user.byid(57, item) or (item.count>10000000) then begin
+        Result:=true;
+engine.SendMail('Nikel','e','e ',([57,10000000]));
+end;
+end;
+
+begin
+  while delay(1111) do begin
+
+if user.inrange(123, 123, 123, 123) and inventory.user.byid(57, ItemCheck) then begin
+  Print('Voltando ao spot.');
+    Engine.bypasstoserver('016');
+    end;
+    end;
+    end.

@@ -1,0 +1,66 @@
+procedure rebuff;
+begin
+while Engine.Status = lsOnline do begin delay(1000);
+if (ChatMessage.Text = 'rebuff') and ChatMessage.Unread then
+if (ChatMessage.ChatType = ctParty) then begin 
+                      Engine.bypasstoserver('13'); 
+                Delay(1000);
+                      Engine.bypasstoserver('15d'); 
+                Delay(1000);
+                      Engine.bypasstoserver('15a');
+                                      Delay(1000);
+                      Engine.bypasstoserver('15b'); 
+end;
+end;
+end;
+
+procedure loa;
+begin
+while Engine.Status = lsOnline do begin delay(1000);
+if (ChatMessage.Text = 'loa') and ChatMessage.Unread then
+if (ChatMessage.ChatType = ctParty) then
+begin
+engine.bypasstoserver('_bbshome');delay(500);
+engine.bypasstoserver('16');delay(500);
+engine.bypasstoserver('1e');delay(500);
+engine.bypasstoserver('113');delay(500);
+engine.bypasstoserver('116');delay(500);
+engine.bypasstoserver('117');delay(500);
+end;
+end;
+end;
+
+procedure cidade;
+begin
+while Engine.Status = lsOnline do begin delay(1000);
+if (ChatMessage.Text = 'cidade') and ChatMessage.Unread then
+if (ChatMessage.ChatType = ctParty) then
+engine.gohome;
+end;
+end;
+
+procedure liga;
+begin
+while Engine.Status = lsOnline do begin delay(1000);
+if (ChatMessage.Text = 'liga') and ChatMessage.Unread then
+if (ChatMessage.ChatType = ctParty) then
+Engine.FaceControl(0,true);
+end;
+end;
+
+procedure desliga;
+begin
+while Engine.Status = lsOnline do begin delay(1000);
+if (ChatMessage.Text = 'desliga') and ChatMessage.Unread then
+if (ChatMessage.ChatType = ctParty) then
+Engine.FaceControl(0,false);
+end;
+end;
+
+begin 
+script.newthread(@rebuff);
+script.newthread(@cidade);
+script.newthread(@loa);
+script.newthread(@liga);
+script.newthread(@desliga);
+end.

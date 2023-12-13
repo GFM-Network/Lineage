@@ -1,0 +1,158 @@
+unit Teleport;
+// Телепорты через Alt+b
+interface
+
+implementation
+
+procedure TpGiran;
+begin
+  Engine.BypassToServer('_bbshome');
+  delay(1000);
+  Engine.BypassToServer('01');
+  delay(1000);
+  Engine.BypassToServer('08');
+  delay(1000);
+  Engine.BypassToServer('011');
+  delay(10000);
+end;
+procedure TpDeathPass;
+begin
+  Engine.BypassToServer('_bbshome');
+  delay(1000);
+  Engine.BypassToServer('01');
+  delay(1000);
+  Engine.BypassToServer('08');
+  delay(1000);
+  Engine.BypassToServer('023');
+  delay(1000);
+  Engine.BypassToServer('0e');
+  delay(10000);
+end;
+procedure TpBeeHive;
+begin
+  Engine.BypassToServer('_bbshome');
+  delay(1000);
+  Engine.BypassToServer('01');
+  delay(1000);
+  Engine.BypassToServer('08');
+  delay(1000);
+  Engine.BypassToServer('01c');
+  delay(1000);
+  Engine.BypassToServer('0f');
+  delay(10000);
+end;
+procedure TpAden;
+begin
+  Engine.BypassToServer('_bbshome');
+  delay(1000);
+  Engine.BypassToServer('01');
+  delay(1000);
+  Engine.BypassToServer('08');
+  delay(1000);
+  Engine.BypassToServer('0e');
+  delay(10000);
+end;
+procedure TpHeine;
+begin
+  Engine.BypassToServer('_bbshome');
+  delay(1000);
+  Engine.BypassToServer('01');
+  delay(1000);
+  Engine.BypassToServer('08');
+  delay(1000);
+  Engine.BypassToServer('015');
+  delay(10000);
+end;
+procedure TpHunters;
+begin
+  Engine.BypassToServer('_bbshome');
+  delay(1000);
+  Engine.BypassToServer('01');
+  delay(1000);
+  Engine.BypassToServer('08');
+  delay(1000);
+  Engine.BypassToServer('016');
+  delay(10000);
+end;
+procedure TpRune;
+begin
+  Engine.BypassToServer('_bbshome');
+  delay(1000);
+  Engine.BypassToServer('01');
+  delay(1000);
+  Engine.BypassToServer('08');
+  delay(1000);
+  Engine.BypassToServer('018');
+  delay(10000);
+end;
+procedure TpCementery;
+begin
+  Engine.BypassToServer('_bbshome');
+  delay(1000);
+  Engine.BypassToServer('01');
+  delay(1000);
+  Engine.BypassToServer('08');
+  delay(1000);
+  Engine.BypassToServer('01d');
+  delay(1000);
+  Engine.BypassToServer('0e');
+  delay(10000);
+end;
+procedure TpGoddard;
+begin
+  Engine.BypassToServer('_bbshome');
+  delay(1000);
+  Engine.BypassToServer('01');
+  delay(1000);
+  Engine.BypassToServer('08');
+  delay(1000);
+  Engine.BypassToServer('014');
+  delay(10000);
+end;
+
+procedure TpScreams;
+begin
+  Engine.BypassToServer('_bbshome');
+  delay(1000);
+  Engine.BypassToServer('01');
+  delay(1000);
+  Engine.BypassToServer('08');
+  delay(1000);
+  Engine.BypassToServer('024');
+  delay(1000);
+  Engine.BypassToServer('09');
+  delay(10000);
+end;
+procedure TpIvory;
+begin
+  Engine.BypassToServer('_bbshome');
+  delay(1000);
+  Engine.BypassToServer('01');
+  delay(1000);
+  Engine.BypassToServer('08');
+  delay(1000);
+  Engine.BypassToServer('022');
+  delay(1000);
+  Engine.BypassToServer('0b');
+  delay(10000);
+end;
+
+procedure TpVOS;
+begin
+  Engine.BypassToServer('_bbshome');
+  delay(1000);
+  Engine.BypassToServer('01');
+  delay(1000);
+  Engine.BypassToServer('08');
+  delay(1000);
+  Engine.BypassToServer('024');
+  delay(1000);
+  Engine.BypassToServer('0b');
+  delay(10000);
+end;
+
+end.
+
+
+         Engine.MoveTo(67989, -71937, -3728);
+         

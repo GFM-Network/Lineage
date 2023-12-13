@@ -1,0 +1,48 @@
+var Figth_Flag:boolean;
+     Item: TL2Item;
+     Npc: TL2Npc;
+     Obj: TL2Buff;
+     IdBuff: integer;
+     Buffs:TL2Buff;
+var L2Skill: TL2Skill;
+
+
+
+procedure toQuest;
+begin
+     Delay(400);
+     Engine.SetTarget('Pinaps');  //Target do NCP GK
+     Delay(400);
+     Engine.DlgOpen; // abre chat combat npc
+     Delay(400);
+     Engine.DlgSel(3);
+     Delay(400);
+     Engine.DlgSel(2);
+     Delay(400);
+     Engine.DlgSel(1);
+     Delay(400);
+     Engine.DlgSel(1);
+     Delay(400);
+     toQuest;
+     Delay(400);
+end;
+
+
+procedure toQuest1;
+begin
+     Delay(400);
+     Engine.SetTarget('Stan');  //Target do NCP GK
+     Delay(400);
+     Engine.DlgOpen; // abre chat combat npc
+     Delay(400);
+     toQuest;
+end;
+
+//-----------------------------------------------------------------------------
+begin    //repete novamente o script
+Print('repete novamente');
+  repeat
+   toQuest;
+  until Engine.Status = lsOffline;
+  Delay(5000);
+end.
