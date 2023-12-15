@@ -5,7 +5,6 @@ Welcome to the Lineage 2 Adrenaline Scripts Repository! This collection includes
 ## Table of Contents
 
 - [Scripts](#scripts)
-  - [1. Auto Leveler Script](#1-auto-leveler-script)
 - [Prerequisites](#prerequisites)
 - [Customization](#customization)
 - [Disclaimer](#disclaimer)
@@ -13,10 +12,7 @@ Welcome to the Lineage 2 Adrenaline Scripts Repository! This collection includes
 
 ## Scripts
 
-### 1. Auto Leveler Script
-
-- **Description:** Automates the leveling process for your character, taking it from a low level to a specified high level.
-- **Usage:** Configure the script parameters, including target level and desired locations for leveling.
+Explore the diverse range of scripts available in this repository. Each script is designed to serve a particular purpose, providing solutions to common challenges or automating specific workflows.
 
 ## Prerequisites
 
