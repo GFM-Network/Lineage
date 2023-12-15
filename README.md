@@ -2,6 +2,15 @@
 
 Welcome to the Lineage 2 Adrenaline Scripts Repository! This collection includes various Adrenaline scripts designed to automate different tasks within the Lineage 2 game. These scripts aim to enhance your gaming experience and streamline repetitive actions.
 
+## Table of Contents
+
+- [Scripts](#scripts)
+  - [1. Auto Leveler Script](#1-auto-leveler-script)
+- [Prerequisites](#prerequisites)
+- [Customization](#customization)
+- [Disclaimer](#disclaimer)
+- [Contributing](#contributing)
+
 ## Scripts
 
 ### 1. Auto Leveler Script
