@@ -8,8 +8,6 @@ procedure FFighter;
 begin
   Engine.BypassToServer('_bbshome');
   Delay(500);
-  Engine.BypassToServer('_bbsgetfav');
-  Delay(500);
   Engine.BypassToServer('_bbsbuffer');
   Delay(500);
   Engine.BypassToServer('_bbsbufferbypass_giveBuffSet figher 0 0');
@@ -20,8 +18,6 @@ end;
 procedure FMage;
 begin
  Engine.BypassToServer('_bbshome');
-  Delay(500);
-  Engine.BypassToServer('_bbsgetfav');
   Delay(500);
   Engine.BypassToServer('_bbsbuffer');
   Delay(500);

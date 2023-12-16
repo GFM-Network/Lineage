@@ -13,7 +13,7 @@ begin
   Delay(1000);
   Engine.MoveTo(-107960, 215560, -3264);
   Print('Second Zone');    
-  Engine.LoadConfig('AutolevelMage');    // Adrenaline Settings
+  Engine.LoadConfig('AutolevelFighter');    // Adrenaline Settings
   Print('Start Farm!');
   Engine.Facecontrol(0, True);
 end;
@@ -26,7 +26,7 @@ begin
   Print('1th Zone');
   Engine.MoveTo(84712,130536,-3600);
   Print('Fight Zone');
-  Engine.LoadConfig('AutolevelMage');    // Adrenaline Settings
+  Engine.LoadConfig('AutolevelFighter');    // Adrenaline Settings
   Print('Start Farm!');
   Engine.Facecontrol(0, True);
 end;
@@ -38,7 +38,7 @@ begin
   Print('First Zone');
   Delay(4000); 
   Print('Fight zone');
-  Engine.LoadConfig('AutolevelMage');    // Adrenaline Settings
+  Engine.LoadConfig('AutolevelFighter');    // Adrenaline Settings
   Print('Start Farm!');
   Engine.Facecontrol(0, True);
 end;

@@ -47,7 +47,7 @@ begin
   toVillageIfDeath;
   while not User.Buffs.ById(IdBuff,obj) do begin
         Print('Sem Nobles');
-        TBuff.FMage;
+        TBuff.FFighter;
         Delay(500);
   end;
   toSpot;
