@@ -47,7 +47,7 @@ begin
   toVillageIfDeath;
   while not User.Buffs.ById(IdBuff,obj) do begin
         Print('Sem Nobles');
-        TBuff.FFighter;
+        TBuff.FMage;
         Delay(500);
   end;
   toSpot;
@@ -57,7 +57,7 @@ procedure toSpot;                                                         // Tel
 begin
   if (User.Level < 5) then                                                // Kill Gremlins to reach level 5
   begin
-    Engine.LoadConfig('AutolevelFighter');                                   // SETTINGS NAME
+    Engine.LoadConfig('AutolevelMage');                                   // SETTINGS NAME
     while (User.Level < 5) do
     begin
       Engine.SetTarget('Gremlin');                                        // TARGET GREMLIN
@@ -224,6 +224,6 @@ begin                                                                     //Loop
     end;
   until (User.Level >= 55) or (Engine.Status = lsOffline);
     Engine.FaceControl(0, false);
-    Print('Finished AutolevelFighter!');
+    Print('Finished AutolevelMage!');
     Delay(500);
 end.
