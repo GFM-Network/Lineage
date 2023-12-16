@@ -19,11 +19,9 @@ procedure FTownzone;
 begin
   Engine.BypassToServer('_bbshome');
   Delay(500);
-  Engine.BypassToServer('_bbsgetfav');
+  Engine.BypassToServer('_cbbsteleportlist');
   Delay(500);
-  Engine.BypassToServer('_bbsgatekeeper');
-  Delay(500);
-  Engine.BypassToServer('12');
+  Engine.BypassToServer('_cbbsteleport_10_1');
   Print('Teleporting To Townzone');
   Delay(5000);
 end;
@@ -31,11 +29,11 @@ end;
 // Teleport to first spot level 5-20 | Talking Island Obelisk of Victory
 procedure FHumanVilage;
 begin
-  Engine.BypassToServer('_bbsgetfav');
+  Engine.BypassToServer('_bbshome');
   Delay(500);
-  Engine.BypassToServer('_bbsgatekeeper');
+  Engine.BypassToServer('_cbbsteleportlist');
   Delay(500);
-  Engine.BypassToServer('10');
+  Engine.BypassToServer('_cbbsteleport_40_1');
   Delay(5000);
   Engine.MoveTo(-83112, 244472, -3728);
   Engine.SetTarget('Milia');  //Target Gatekeeper
@@ -51,16 +49,17 @@ begin
   Delay(5000);
 end;
 
-// Teleport to second spot level 20-40 | Inside Ant Nest
+// Teleport to second spot level 20-40 | Brekas Orc
 procedure FAntNest;
 begin
-  Engine.BypassToServer('_bbsgetfav');
+  Engine.BypassToServer('_bbshome');
   Delay(500);
-  Engine.BypassToServer('_bbsgatekeeper');
+  Engine.BypassToServer('_cbbsteleportlist');
   Delay(500);
-  Engine.BypassToServer('_bbsgatekeeper_main-13.htm');
+  Engine.BypassToServer('_bbspage:teleport/main-16');
   Delay(500);
-  Engine.BypassToServer('13');
+  Engine.BypassToServer('_cbbsteleport_20_1');
+  Delay(500);
   Print('Teleporting to Second Spot');
   Delay(5000);
 end;
@@ -68,13 +67,14 @@ end;
 // Teleport to third spot level 40-55 | Fields of Massacre
 procedure FFieldsofMassacre;
 begin
-  Engine.BypassToServer('_bbsgetfav');
+  Engine.BypassToServer('_bbshome');
   Delay(500);
-  Engine.BypassToServer('_bbsgatekeeper');
+  Engine.BypassToServer('_cbbsteleportlist');
   Delay(500);
-  Engine.BypassToServer('_bbsgatekeeper_main-20.htm');
+  Engine.BypassToServer('_bbspage:teleport/main-20');
   Delay(500);
-  Engine.BypassToServer('14');
+  Engine.BypassToServer('_cbbsteleport_18_9');
+  Delay(500);
   Print('Teleporting to Third Spot');
   Delay(5000);
 end;
