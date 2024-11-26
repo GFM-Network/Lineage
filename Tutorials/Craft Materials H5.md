@@ -4,7 +4,8 @@
 
 ---
 
-## Asofe
+## Asofe  ![image](https://github.com/user-attachments/assets/b1d93b97-c770-419b-9992-ae19c902b883)
+
 ### Easy
 - **Location**: Garden of Eva  
   - **Required**: Level ~50 Bounty Hunter  
@@ -21,7 +22,8 @@
 
 ---
 
-## Coarse Bone Powder (CBP)
+## Coarse Bone Powder (CBP)  ![image](https://github.com/user-attachments/assets/f50e3a4c-4115-49ff-b4f6-048d729dc283)
+
 - **Location**: Branded Catacombs  
   - **Required**: Level ~45 Bounty Hunter  
   - **Mobs**:  
@@ -31,7 +33,8 @@
 
 ---
 
-## Mold Hardener
+## Mold Hardener  ![image](https://github.com/user-attachments/assets/1ce51681-ab09-4196-a5d7-904d8124143f)
+
 ### Easy
 - **Location**: Imperial Tomb  
   - **Required**: Level ~80 Bounty Hunter  
@@ -46,7 +49,8 @@
 
 ---
 
-## Durable Metal Plate (DMP)
+## Durable Metal Plate (DMP)  ![image](https://github.com/user-attachments/assets/10690c1e-af0d-430a-8fb3-ff3bf0019084)
+
 ### Easy
 - **Location**: Hot Springs  
   - **Required**: Level ~80 Bounty Hunter  
@@ -67,7 +71,8 @@
 
 ---
 
-## Stone of Purity (SOP)
+## Stone of Purity (SOP)  ![image](https://github.com/user-attachments/assets/53378802-1ea5-452c-9d7f-59ff2d844e65)
+
 ### Easy
 - **Location**: Branded Catacombs  
   - **Required**: Level ~45 Bounty Hunter  
@@ -83,7 +88,8 @@
 
 ---
 
-## Adamantine Nugget
+## Adamantine Nugget  ![image](https://github.com/user-attachments/assets/56373ac1-8733-4c6d-b827-f53a94f8515c)
+
 - **Location**: Imperial Tomb  
   - **Required**: Level ~80 Bounty Hunter  
   - **Mobs**:  
@@ -91,7 +97,8 @@
 
 ---
 
-## Iron Ore
+## Iron Ore  ![image](https://github.com/user-attachments/assets/c80306bb-4108-4f7a-9bc9-b06017ab95e2)
+
 - **Location**: Ancient Battlegrounds  
   - **Required**: Level ~60 Bounty Hunter  
   - **Mobs**:  
@@ -99,7 +106,8 @@
 
 ---
 
-## Cord
+## Cord  ![image](https://github.com/user-attachments/assets/60510287-c435-4483-8308-bc44067b0ab5)
+
 - **Location**: Ancient Battlegrounds  
   - **Required**: Level ~60 Bounty Hunter  
   - **Mobs**:  
@@ -107,7 +115,8 @@
 
 ---
 
-## Steel
+## Steel  ![image](https://github.com/user-attachments/assets/5ad73821-0970-4aa1-a392-19de2f9a8cf9)
+
 - **Location**: Tower of Infinitum  
   - **Required**: Level ~85 Bounty Hunter & a friend for teleportation  
   - **Mobs**:  
@@ -115,7 +124,8 @@
 
 ---
 
-## Orichalcum
+## Orichalcum  ![image](https://github.com/user-attachments/assets/f040c53a-68e2-49e7-8bc6-8b5289251851)
+
 ### Easy
 - **Location**: Monastery of Silence (2nd Floor)  
   - **Required**: Level 85 Mage or well-equipped Fighter  
@@ -141,7 +151,8 @@
 
 ---
 
-## Crafted Leather (CL)
+## Crafted Leather (CL)  ![image](https://github.com/user-attachments/assets/0de53440-7ad5-4b36-b27c-1d16a49e67d2)
+
 - **Location**: Forge of the Gods  
   - **Required**: Level 85 Bounty Hunter with equipment  
   - **Mobs**:  
@@ -150,7 +161,8 @@
 
 ---
 
-## Varnish
+## Varnish  ![image](https://github.com/user-attachments/assets/59b9470f-aa2e-4076-a0d3-9f7dd7e88258)
+
 - **Location**: Ice Merchant Cabin  
   - **Required**: Level ~60 Bounty Hunter  
   - **Mobs**:  
@@ -159,7 +171,8 @@
 
 ---
 
-## Mithril Alloy
+## Mithril Alloy  ![image](https://github.com/user-attachments/assets/f23f0254-9367-4499-8ab8-5764132b0199)
+
 ### Easy
 - **Location**: Dragon Valley (Center)  
   - **Required**: Level ~82 Mage  
