@@ -1,6 +1,6 @@
 # Material Farming Guide
 
-⚠️ **Note**: These are suggestions provided by the Staff of L2Kain. Feel free to explore and farm in other areas if you find them more efficient.
+⚠️ **Note**: These are suggestions. Feel free to explore and farm in other areas if you find them more efficient.
 
 ---
 
