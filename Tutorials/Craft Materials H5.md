@@ -4,14 +4,17 @@
 
 ---
 
-## Asofe  ![image](https://github.com/user-attachments/assets/b1d93b97-c770-419b-9992-ae19c902b883)
+## Asofe  ![image](https://github.com/user-attachments/assets/1971a1f8-826f-47f7-b8c2-ec5c3be48979)
+
 
 ### Easy
 - **Location**: Garden of Eva  
   - **Required**: Level ~50 Bounty Hunter  
   - **Mobs**:  
-    - Doll Master  
-    - Garden Guard Captain  
+    - Doll Master  ![image](https://github.com/user-attachments/assets/8c645e05-913e-47a4-8264-06a2824b6d91)
+
+    - Garden Guard Captain  ![image](https://github.com/user-attachments/assets/dd4ee1d5-6849-4224-b163-533973b7c3d9)
+
   ⚠️ Mobs need to be **Spoiled** to drop Asofe.
 
 ### Hard
